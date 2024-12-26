@@ -69,7 +69,7 @@
 import { ref } from "vue";
 import HeroBanner from "@/components/HomeView/HeroBanner.vue";
 import HeroBackground from "@/assets/images/HeroBackground.jpg";
-import HeroMainImage from "@/assets/images/heromain.png";
+import HeroMainImage from "@/assets/images/heroMain.png";
 import AppleStore from "@/assets/images/appstore.png";
 import GooglePlay from "@/assets/images/playstore.png";
 import HeroCircle from "@/assets/images/heroMainCircles.png";
