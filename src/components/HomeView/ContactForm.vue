@@ -107,7 +107,7 @@
                 class="ml-2 text-base font-normal leading-7"
               >
                 Ho letto la
-                <router-link href="#" class="text-bold">privacy policy</router-link>
+                <router-link to="#" class="text-bold">privacy policy</router-link>
               </label>
             </div>
             <p v-if="errors.privacyPolicy" class="text-red-500 text-sm mt-1">

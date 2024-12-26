@@ -8,10 +8,10 @@
 
     <ul class="hidden lg:flex space-x-6">
       <li v-for="(item, index) in menuItems" :key="index">
-        <a
-          :href="item.href"
+        <router-link
+          :to="item.href"
           class="text-monorope text-base font-normal hover:text-primary-color cursor-pointer"
-          >{{ item.text }}</a
+          >{{ item.text }}</router-link
         >
       </li>
     </ul>
@@ -42,7 +42,8 @@
           <router-link
             :to="item.href"
             class="block text-monorope text-base font-normal hover:text-primary-color"
-            >{{ item.text }}</router-link>
+            >{{ item.text }}</router-link
+          >
         </li>
       </ul>
       <div class="mt-4">

@@ -15,7 +15,7 @@
           <ul class="space-y-2">
             <li v-for="(link, linkIndex) in section.links" :key="linkIndex">
               <router-link
-                :href="link.href"
+                :to="link.href"
                 class="hover:underline font-sans font-normal text-sm leading-6 text-footer-links"
               >
                 {{ link.text }}
@@ -56,7 +56,7 @@
             <router-link
               v-for="(link, index) in data.socialLinks"
               :key="index"
-              :href="link.href"
+              :to="link.href"
               :aria-label="link.ariaLabel"
               class="rounded-full bg-gray-900 text-white px-2.5 py-1"
             >
@@ -77,7 +77,7 @@
               <ul class="space-y-4">
                 <li v-for="(link, index) in data.platformLinks" :key="index">
                   <router-link
-                    :href="link.href"
+                    :to="link.href"
                     class="text-footer-links-text text-base font-normal hover:text-gray-200"
                   >
                     {{ link.text }}
@@ -95,7 +95,7 @@
               <ul class="space-y-4">
                 <li v-for="(link, index) in data.supportLinks" :key="index">
                   <router-link
-                    :href="link.href"
+                    :to="link.href"
                     class="text-footer-links-text text-base font-normal hover:text-gray-200"
                   >
                     {{ link.text }}
@@ -113,7 +113,7 @@
               <ul class="space-y-4">
                 <li v-for="(link, index) in data.aboutLinks" :key="index">
                   <router-link
-                    :href="link.href"
+                    :to="link.href"
                     class="text-footer-links-text text-base font-normal hover:text-gray-200"
                   >
                     {{ link.text }}
@@ -129,14 +129,14 @@
                 {{ data.appLinksTitle }}
               </h3>
               <div class="mt-4 space-y-4">
-                <router-link :href="data.appLinks.playStore.src" class="block">
+                <router-link :to="data.appLinks.playStore.src" class="block">
                   <img
                     :src="data.appLinks.playStore.src"
                     :alt="data.appLinks.playStore.alt"
                     class="h-10"
                   />
                 </router-link>
-                <router-link :href="data.appLinks.appleStore.src" class="block">
+                <router-link :to="data.appLinks.appleStore.src" class="block">
                   <img
                     :src="data.appLinks.appleStore.src"
                     :alt="data.appLinks.appleStore.alt"
