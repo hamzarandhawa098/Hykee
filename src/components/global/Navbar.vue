@@ -39,11 +39,10 @@
     >
       <ul class="space-y-4">
         <li v-for="(item, index) in menuItems" :key="index">
-          <a
-            :href="item.href"
+          <router-link
+            :to="item.href"
             class="block text-monorope text-base font-normal hover:text-primary-color"
-            >{{ item.text }}</a
-          >
+            >{{ item.text }}</router-link>
         </li>
       </ul>
       <div class="mt-4">

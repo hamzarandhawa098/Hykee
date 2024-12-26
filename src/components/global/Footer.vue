@@ -14,12 +14,12 @@
           </h3>
           <ul class="space-y-2">
             <li v-for="(link, linkIndex) in section.links" :key="linkIndex">
-              <a
+              <router-link
                 :href="link.href"
                 class="hover:underline font-sans font-normal text-sm leading-6 text-footer-links"
               >
                 {{ link.text }}
-              </a>
+              </router-link>
             </li>
           </ul>
         </div>
@@ -53,7 +53,7 @@
             {{ data.description }}
           </p>
           <div class="flex space-x-4 mt-4">
-            <a
+            <router-link
               v-for="(link, index) in data.socialLinks"
               :key="index"
               :href="link.href"
@@ -61,7 +61,7 @@
               class="rounded-full bg-gray-900 text-white px-2.5 py-1"
             >
               <font-awesome-icon :icon="link.icon" />
-            </a>
+            </router-link>
           </div>
         </div>
         
@@ -76,12 +76,12 @@
               </h3>
               <ul class="space-y-4">
                 <li v-for="(link, index) in data.platformLinks" :key="index">
-                  <a
+                  <router-link
                     :href="link.href"
                     class="text-footer-links-text text-base font-normal hover:text-gray-200"
                   >
                     {{ link.text }}
-                  </a>
+                  </router-link>
                 </li>
               </ul>
             </div>
@@ -94,12 +94,12 @@
               </h3>
               <ul class="space-y-4">
                 <li v-for="(link, index) in data.supportLinks" :key="index">
-                  <a
+                  <router-link
                     :href="link.href"
                     class="text-footer-links-text text-base font-normal hover:text-gray-200"
                   >
                     {{ link.text }}
-                  </a>
+                  </router-link>
                 </li>
               </ul>
             </div>
@@ -112,12 +112,12 @@
               </h3>
               <ul class="space-y-4">
                 <li v-for="(link, index) in data.aboutLinks" :key="index">
-                  <a
+                  <router-link
                     :href="link.href"
                     class="text-footer-links-text text-base font-normal hover:text-gray-200"
                   >
                     {{ link.text }}
-                  </a>
+                  </router-link>
                 </li>
               </ul>
             </div>
@@ -129,20 +129,20 @@
                 {{ data.appLinksTitle }}
               </h3>
               <div class="mt-4 space-y-4">
-                <a :href="data.appLinks.playStore.src" class="block">
+                <router-link :href="data.appLinks.playStore.src" class="block">
                   <img
                     :src="data.appLinks.playStore.src"
                     :alt="data.appLinks.playStore.alt"
                     class="h-10"
                   />
-                </a>
-                <a :href="data.appLinks.appleStore.src" class="block">
+                </router-link>
+                <router-link :href="data.appLinks.appleStore.src" class="block">
                   <img
                     :src="data.appLinks.appleStore.src"
                     :alt="data.appLinks.appleStore.alt"
                     class="h-10"
                   />
-                </a>
+                </router-link>
               </div>
             </div>
           </div>
