@@ -10,9 +10,10 @@
       <li v-for="(item, index) in menuItems" :key="index">
         <router-link
           :to="item.href"
+          @click.prevent="item.text === 'Contatti' ? emitContactClick() : null"
           class="text-monorope text-base font-normal hover:text-primary-color cursor-pointer"
-          >{{ item.text }}</router-link
-        >
+          >{{ item.text }}
+        </router-link>
       </li>
     </ul>
 
@@ -63,6 +64,12 @@ import { ref } from "vue";
 import Logo from "@/components/icons/Logo.vue";
 import Button from "@/components/global/Button.vue";
 import Hamburger from "../icons/Hamburger.vue";
+
+const emit = defineEmits(["contact-click"]);
+
+function emitContactClick() {
+  emit("contact-click");
+}
 
 defineProps({
   menuItems: Array,

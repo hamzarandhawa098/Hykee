@@ -11,9 +11,9 @@
         </h1>
       </div>
       <div
-        class="mt-8 text-center lg:text-left lg:mt-0 lg:ml-12 max-w-lg text-gray-300 z-10"
+        class="mt-8 text-center lg:text-left lg:mt-0 lg:ml-12 max-w-lg text-white z-10"
       >
-        <p class="mb-4" v-html="OurManifestoDescription">
+        <p class="mb-4 font-monorope text-sm font-normal" v-html="OurManifestoDescription">
         </p>
       </div>
     </div>
@@ -30,7 +30,7 @@
       <div
         class="mt-8 lg:mt-0 text-center lg:text-left lg:ml-12 max-w-lg text-gray-300 z-10"
       >
-        <p class="mb-4" v-html="HowSeetheMarketDescription">
+        <p class="mb-4 font-monorope text-sm font-normal" v-html="HowSeetheMarketDescription">
         </p>
       </div>
     </div>

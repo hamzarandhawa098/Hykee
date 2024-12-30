@@ -14,13 +14,18 @@ export default {
         'footer-bg-color': '#0B0D17',
         'footer-links-text': '#EEEFF4',
         'solution-bg-color': '#151824',
-        'solution-features': '#848199'
+        'solution-features': '#848199',
+        'card-text' : '#231D4F',
+        'card-button-active' : '#000D08',
+        'faqIconCircular' : '#090C18',
+        'faqQuestionBg' : '#151824'
       },
       fontFamily: {
         monorope: ['Monorope', 'sans-serif'],
         sans: ['DM Sans', 'sans-serif'],
         coolvetica: ['Coolvetica', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
+        avenir: ['Avenir', 'sans-serif'],
 
       },
       aspectRatio: {

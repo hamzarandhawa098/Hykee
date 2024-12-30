@@ -10,20 +10,33 @@
       signupText="Sign up"
       :Logo="Logo"
       :Hamburger="Hamburger"
+      @contact-click="openPopup"
     />
     <transition name="fade" mode="out-in">
       <router-view />
     </transition>
+    <MoreInformation
+    :MoreInformationBg="MoreInformationBg"
+    :MoreInformationText="'Desideri maggiori informazioni?'"
+    :MoreInformationButtonText="'Contattaci'"
+    :MoreInformationIcon="EnvelopeIcon"
+  />
+  <ContactForm
+    :ContactFormBg="ContactFormBg"
+    :contactFormTitle="'Stay tuned!'"
+  />
     <Footer
       :Logo="Logo"
       :footerSections="footerSections"
       :footerMeta="footerMeta"
       :data="data"
     />
+    <ContattiPopup v-if="showPopup" @close="closePopup" />
+
   </div>
 </template>
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, watch } from "vue";
 import TopBar from "@/components/global/TopBar.vue";
 import Navbar from "@/components/global/Navbar.vue";
 import Logo from "@/components/icons/Logo.vue";
@@ -32,18 +45,40 @@ import Footer from "@/components/global/Footer.vue";
 import { useRoute } from "vue-router";
 import AppleStore from "@/assets/images/appstore.png";
 import PlayStore from "@/assets/images/playstore.png";
+import MoreInformation from "@/components/global/MoreInformation.vue";
+import ContactForm from "@/components/global/ContactForm.vue";
+import MoreInformationBg from "@/assets/images/MoreInformationBg.png";
+import ContactFormBg from "@/assets/images/ContactForm.png";
+import EnvelopeIcon from "@/components/icons/EnvelopeIcon.vue";
+import ContattiPopup from "@/components/global/ContattiPopup.vue";
 
 const route = useRoute();
 
 const isHomePage = computed(() => route.path === "/");
+const showPopup = ref(false);
 
+function openPopup() {
+  showPopup.value = true;
+}
+
+function closePopup() {
+  showPopup.value = false;
+}
+
+watch(showPopup, (newValue) => {
+  if (newValue) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+});
 //Navbar
 const menuItems = ref([
   { text: "Chi siamo", href: "/chi-siamo" },
   { text: "Come funziona", href: "/come-funziona" },
   { text: "Perchè scegliere HYKEE", href: "/perchè-scegliere-hykee" },
-  { text: "Prezzi", href: "#" },
-  { text: "FAQ", href: "#" },
+  { text: "Prezzi", href: "/prezzi" },
+  { text: "FAQ", href: "/faq" },
   { text: "Contatti", href: "#" },
   { text: "Partner", href: "/partners" },
 ]);

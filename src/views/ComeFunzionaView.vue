@@ -27,16 +27,7 @@
     :StartGrowingButtonText="'Iscriviti ora'"
     :StartGrowingTitleText="'Hey!'"
   />
-  <MoreInformation
-    :MoreInformationBg="MoreInformationBg"
-    :MoreInformationText="'Desideri maggiori informazioni?'"
-    :MoreInformationButtonText="'Contattaci'"
-    :MoreInformationIcon="EnvelopeIcon"
-  />
-  <ContactForm
-    :ContactFormBg="ContactFormBg"
-    :contactFormTitle="'Stay tuned!'"
-  />
+  
 </template>
 <script setup>
 import { ref } from "vue";
@@ -49,9 +40,7 @@ import RightMobile from "@/assets/images/RightMobile.png";
 import StartGrowing from "@/components/HomeView/StartGrowing.vue";
 import StartGrowingFunziona from "@/assets/images/StartGrowingFunziona.png";
 import StartGrowingAnimation from "@/assets/images/StartGrowingAnimation.png";
-import MoreInformation from "@/components/HomeView/MoreInformation.vue";
-import ContactForm from "@/components/HomeView/ContactForm.vue";
-import ContactFormBg from "@/assets/images/ContactForm.png";
+
 import MobileSteps from "@/components/HomeView/MobileSteps.vue";
 
 const AnalyzeText = ref(

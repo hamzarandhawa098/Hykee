@@ -20,24 +20,10 @@
                                     We believe technology is an essential part of our lives but cannot replace the great creative power of human connections and collaboration…it can eventually augment it.<span><br><br></span> \
                                     This is what we call Augmented Advisory Platform'"
     />
-    <MoreInformation
-      :MoreInformationBg="MoreInformationBg"
-      :MoreInformationText="'Desideri maggiori informazioni?'"
-      :MoreInformationButtonText="'Contattaci'"
-      :MoreInformationIcon="EnvelopeIcon"
-    />
-    <ContactForm
-      :ContactFormBg="ContactFormBg"
-      :contactFormTitle="'Stay tuned!'"
-    />
+    
   </div>
 </template>
 <script setup>
 import OurManifesto from "@/components/ChiSiamoView/OurManifesto.vue";
-import MoreInformation from "@/components/HomeView/MoreInformation.vue";
-import ContactForm from '@/components/HomeView/ContactForm.vue'
-import MoreInformationBg from "@/assets/images/MoreInformationBg.png";
-import EnvelopeIcon from "@/components/icons/EnvelopeIcon.vue";
-import ContactFormBg from "@/assets/images/ContactForm.png";
 import ChiSiamoBg from "@/assets/images/Chi-Siamo-Bg.png";
 </script>

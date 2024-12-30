@@ -29,16 +29,6 @@
  
   />
 
-  <MoreInformation
-    :MoreInformationBg="MoreInformationBg"
-    :MoreInformationText="'Desideri maggiori informazioni?'"
-    :MoreInformationButtonText="'Contattaci'"
-    :MoreInformationIcon="EnvelopeIcon"
-  />
-  <ContactForm
-    :ContactFormBg="ContactFormBg"
-    :contactFormTitle="'Stay tuned!'"
-  />
 </template>
 <script setup>
 import { ref } from "vue";
@@ -51,10 +41,6 @@ import MoreInformationBg from "@/assets/images/MoreInformationBg.png";
 import AnalyzeIcon from "@/components/icons/AnalyzeIcon.vue";
 import Analyze from "@/components/ComeFunzionaView/Analyze.vue";
 import Solutions from "@/components/Partners/Solutions.vue";
-import MoreInformation from "@/components/HomeView/MoreInformation.vue";
-import EnvelopeIcon from "@/components/icons/EnvelopeIcon.vue";
-import ContactForm from "@/components/HomeView/ContactForm.vue";
-import ContactFormBg from "@/assets/images/ContactForm.png";
 
 
 

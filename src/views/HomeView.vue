@@ -53,16 +53,7 @@
     :IntermediaryDescription="'Scopri le soluzioni HYKEE più adatte a te e ai tuoi clienti!'"
     :IntermediaryButtonText="'Scopri Hykee'"
   />
-  <MoreInformation
-    :MoreInformationBg="MoreInformationBg"
-    :MoreInformationText="'Desideri maggiori informazioni?'"
-    :MoreInformationButtonText="'Contattaci'"
-    :MoreInformationIcon="EnvelopeIcon"
-  />
-  <ContactForm
-    :ContactFormBg="ContactFormBg"
-    :contactFormTitle="'Stay tuned!'"
-  />
+
 </template>
 
 <script setup>
@@ -90,11 +81,6 @@ import StartGrowingImage from "@/assets/images/StartGrowingImage.png";
 import StartGrowingAnimation from "@/assets/images/StartGrowingAnimation.png";
 import Intermediary from "@/components/HomeView/Intermediary.vue";
 import IntermediaryBg from "@/assets/images/IntermediaryBg.png";
-import MoreInformation from "@/components/HomeView/MoreInformation.vue";
-import MoreInformationBg from "@/assets/images/MoreInformationBg.png";
-import EnvelopeIcon from "@/components/icons/EnvelopeIcon.vue";
-import ContactForm from "@/components/HomeView/ContactForm.vue";
-import ContactFormBg from "@/assets/images/ContactForm.png";
 import MobileSteps from "@/components/HomeView/MobileSteps.vue";
 import LeftMobile from "@/assets/images/LeftMobile.png";
 import RightMobile from "@/assets/images/RightMobile.png";

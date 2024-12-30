@@ -2,7 +2,7 @@
   <section class="text-white py-20" v-if="isHomePage">
     <div class="flex flex-col-reverse lg:flex-col justify-center items-center">
       <div
-        class="max-w-5xl mx-auto w-full flex flex-wrap space-y-12 lg:space-y-0 md:justify-between gap-8 px-10 lg:px-0 text-left"
+        class="max-w-7xl mx-auto w-full flex flex-wrap space-y-12 lg:space-y-0 md:justify-between gap-8 px-10 lg:px-0 text-left"
       >
         <div
           v-for="(section, index) in footerSections"

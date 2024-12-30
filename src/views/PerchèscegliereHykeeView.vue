@@ -28,16 +28,6 @@
     :StartGrowingButtonText="'Iniziamo!'"
     :StartGrowingTitleText="'Hey!'"
   />
-  <MoreInformation
-    :MoreInformationBg="MoreInformationBg"
-    :MoreInformationText="'Desideri maggiori informazioni?'"
-    :MoreInformationButtonText="'Contattaci'"
-    :MoreInformationIcon="EnvelopeIcon"
-  />
-  <ContactForm
-    :ContactFormBg="ContactFormBg"
-    :contactFormTitle="'Stay tuned!'"
-  />
 </template>
 <script setup>
 import TechnologyConsultancy from "@/components/HomeView/TechnologyConsultancy.vue";
@@ -49,11 +39,7 @@ import RightMobile from "@/assets/images/RightMobile.png";
 import StartGrowing from "@/components/HomeView/StartGrowing.vue";
 import StartGrowingImage from "@/assets/images/StartGrowingImage.png";
 import StartGrowingAnimation from "@/assets/images/StartGrowingAnimation.png";
-import MoreInformation from "@/components/HomeView/MoreInformation.vue";
-import ContactForm from "@/components/HomeView/ContactForm.vue";
-import MoreInformationBg from "@/assets/images/MoreInformationBg.png";
-import ContactFormBg from "@/assets/images/ContactForm.png";
-import EnvelopeIcon from "@/components/icons/EnvelopeIcon.vue";
+
 
 const steps = [
   {

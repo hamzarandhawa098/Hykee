@@ -6,7 +6,7 @@
       class="absolute inset-0 w-full h-auto object-cover opacity-100"
     />
     <div
-      class="max-w-5xl mx-auto relative z-10 flex flex-col items-center h-auto justify-center  backdrop-blur-4xl pb-10"
+      class="max-w-7xl mx-auto relative z-10 flex flex-col items-center h-auto justify-center  backdrop-blur-4xl pb-10"
     >
       <div class="mt-6 max-w-xl space-y-4 text-center">
         <p

@@ -22,7 +22,7 @@
                 v-model="form.nome"
                 type="text"
                 placeholder="Nome"
-                class="bg-transparent border border-white rounded-full px-20 py-3 focus:outline-none focus:ring-2"
+                class="bg-transparent border border-white rounded-full px-14 lg:px-20 py-3 focus:outline-none focus:ring-2"
                 :class="{
                   'ring-red-500 border-red-500': errors.nome,
                   'focus:ring-primary-color': !errors.nome,
@@ -37,7 +37,7 @@
                 v-model="form.cognome"
                 type="text"
                 placeholder="Cognome"
-                class="bg-transparent border border-white rounded-full px-20 py-3 focus:outline-none focus:ring-2"
+                class="bg-transparent border border-white rounded-full px-14 lg:px-20 py-3 focus:outline-none focus:ring-2"
                 :class="{
                   'ring-red-500 border-red-500': errors.cognome,
                   'focus:ring-primary-color': !errors.cognome,
@@ -52,7 +52,7 @@
                 v-model="form.email"
                 type="email"
                 placeholder="Email"
-                class="bg-transparent border border-white rounded-full px-20 py-3 focus:outline-none focus:ring-2"
+                class="bg-transparent border border-white rounded-full px-14 lg:px-20 py-3 focus:outline-none focus:ring-2"
                 :class="{
                   'ring-red-500 border-red-500': errors.email,
                   'focus:ring-primary-color': !errors.email,
@@ -67,7 +67,7 @@
                 v-model="form.telefono"
                 type="text"
                 placeholder="Telefono"
-                class="bg-transparent border border-white rounded-full px-20 py-3 focus:outline-none focus:ring-2"
+                class="bg-transparent border border-white rounded-full px-14 lg:px-20 py-3 focus:outline-none focus:ring-2"
                 :class="{
                   'ring-red-500 border-red-500': errors.telefono,
                   'focus:ring-primary-color': !errors.telefono,

@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white py-12 max-w-5xl mx-auto">
+  <div class="text-white py-12 max-w-7xl mx-auto">
     <div class="container mx-auto px-6 lg:px-12">
       <h2
         class="text-titleSecondary font-bold text-center lg:text-start font-sans w-full lg:w-1/3 mb-12"

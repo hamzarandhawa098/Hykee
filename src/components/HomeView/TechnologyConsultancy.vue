@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-white py-14 px-6 flex flex-col items-center text-start lg:text-center w-full max-w-5xl mx-auto"
+    class="text-white py-14 px-6 flex flex-col items-center text-start lg:text-center w-full max-w-7xl mx-auto"
   >
     <div v-if="isHomePage">
       <div
