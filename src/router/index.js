@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import ComeFunziona from '@/views/ComeFunzionaView.vue'
-import Partners from '@/views/Partners.vue'
+import Partners from '@/views/PartnersView.vue'
+import PerchèscegliereHykee from '@/views/PerchèscegliereHykee.vue'
+import ChiSiamoView from '@/views/ChiSiamoView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,6 +22,16 @@ const router = createRouter({
       path: '/partners',
       name: 'partners',
       component: Partners,
+    },
+    {
+      path: '/perchè-scegliere-hykee',
+      name: 'perchèsceglierehykee ',
+      component: PerchèscegliereHykee,
+    },
+    {
+      path: '/chi-siamo',
+      name: 'chisiamo',
+      component: ChiSiamoView,
     },
   ],
 })

@@ -20,6 +20,7 @@ export default {
         monorope: ['Monorope', 'sans-serif'],
         sans: ['DM Sans', 'sans-serif'],
         coolvetica: ['Coolvetica', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
 
       },
       aspectRatio: {

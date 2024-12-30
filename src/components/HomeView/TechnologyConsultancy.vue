@@ -2,14 +2,32 @@
   <div
     class="text-white py-14 px-6 flex flex-col items-center text-start lg:text-center w-full max-w-5xl mx-auto"
   >
-    <div class="text-4xl lg:text-title font-coolvetica hidden lg:block lg:font-sans font-bold lg:leading-[66px]" v-html="TechText">
+    <div v-if="isHomePage">
+      <div
+        class="text-4xl lg:text-title hidden lg:block lg:font-sans font-bold lg:leading-[66px]"
+        v-html="TechText"
+      ></div>
+      <div
+        class="text-primary-color font-coolvetica text-5xl font-normal lg:hidden outline-text"
+      >
+        {{ TitleTextMobile }}
+      </div>
     </div>
-    <div class="text-primary-color text-5xl font-normal lg:hidden outline-text">
-    {{ TitleTextMobile }}
-</div>
-    <div class="flex flex-col lg:flex-row mt-6 justify-center items-center space-x-0 lg:space-x-12">
+    <div v-else>
+      <div
+        class="text-primary-color font-coolvetica text-5xl lg:text-[130px] font-normal outline-text"
+      >
+        {{ TitleTextMobile }}
+      </div>
+    </div>
+    <div
+      class="flex flex-col lg:flex-row mt-6 justify-center items-center space-x-0 lg:space-x-12"
+    >
       <div>
-        <component :is="LogoTransparent" class="w-full h-auto lg:w-[404px] lg:h-[131px]" />
+        <component
+          :is="LogoTransparent"
+          class="w-full h-auto lg:w-[404px] lg:h-[131px]"
+        />
       </div>
       <p
         class="text-sm md:text-base text-left flex items-start mt-9 justify-center text-white leading-7 max-w-xl"
@@ -21,20 +39,17 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+const route = useRoute();
+const isHomePage = computed(() => route.path === "/");
+
 defineProps({
   LogoTransparent: String,
   TechText: String,
   TechDescription: String,
   TitleTextMobile: String,
-})
+});
 </script>
 
-<style scoped>
-
-.outline-text {
-  font-family: 'Coolvetica', sans-serif; 
-  color: transparent; 
-  -webkit-text-stroke: 2px #00CD78; 
-  text-align: center; 
-}
-</style>
+<style scoped></style>

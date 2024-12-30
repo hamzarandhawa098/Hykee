@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-screen flex items-center justify-center">
+  <div class="relative min-h-screen flex items-center justify-center z-10">
     <img
       :src="ContactFormBg"
       alt="Background"

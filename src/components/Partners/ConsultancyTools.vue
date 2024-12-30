@@ -3,7 +3,7 @@
     <img
       :src="consultancyBg"
       alt="Circular Background"
-      class="absolute inset-0 w-full h-auto object-cover opacity-100 z-0"
+      class="absolute inset-0 w-auto h-full object-cover opacity-100 z-0"
     />
     <div class="max-w-6xl mx-auto w-full">
       <div class="relative flex flex-col md:flex-row items-center gap-8 z-10">
