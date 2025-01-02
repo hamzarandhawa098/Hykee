@@ -1,38 +1,42 @@
 <template>
-  <nav class="flex justify-between items-center px-10 py-4 text-white">
-    <div class="flex items-center space-x-2">
+  <nav class="flex justify-between items-center px-[46.5px]  text-white">
+    <div class="lg:pt-[39.6px] pt-[20.62px]"
+    >
       <router-link to="/">
         <component :is="Logo" />
       </router-link>
     </div>
 
-    <ul class="hidden lg:flex space-x-6">
+    <ul class="hidden lg:flex space-x-[21px] pt-[47.5px] pb-[10.5px]">
       <li v-for="(item, index) in menuItems" :key="index">
         <router-link
           :to="item.href"
           @click.prevent="item.text === 'Contatti' ? emitContactClick() : null"
-          class="text-monorope text-base font-normal hover:text-primary-color cursor-pointer"
+          class="font-monorope text-sm font-normal hover:text-primary-color cursor-pointer"
           >{{ item.text }}
         </router-link>
       </li>
     </ul>
 
-    <div class="hidden lg:flex items-center space-x-4 cursor-pointer">
-      <button class="text-white hover:text-primary-color">
+    <div
+      class="hidden lg:flex items-center space-x-3.5 cursor-pointer pt-[37px]"
+    >
+      <button
+        class="text-white font-monorope font-extrabold text-sm hover:text-primary-color"
+      >
         {{ loginText }}
       </button>
       <Button class="px-4 py-2">
         {{ signupText }}
       </Button>
     </div>
-
-    <div
-      class="lg:hidden flex justify-center items-center border rounded-full border-primary-color border-6 p-2"
-    >
-      <button @click="toggleMenu" class="text-white">
-        <component :is="Hamburger" />
-      </button>
-    </div>
+      <div
+        class="lg:hidden mt-4 flex justify-center items-center border rounded-full border-primary-color border-6 p-2"
+      >
+        <button @click="toggleMenu" class="text-white">
+          <component :is="Hamburger" />
+        </button>
+      </div>
 
     <div
       v-if="isMenuOpen"
@@ -42,6 +46,9 @@
         <li v-for="(item, index) in menuItems" :key="index">
           <router-link
             :to="item.href"
+            @click.prevent="
+              item.text === 'Contatti' ? emitContactClick() : null
+            "
             class="block text-monorope text-base font-normal hover:text-primary-color"
             >{{ item.text }}</router-link
           >

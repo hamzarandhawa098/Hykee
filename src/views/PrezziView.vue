@@ -1,6 +1,6 @@
 <template>
   <ChooseSolution
-    :ChooseSolutionTitle="'Scegli la soluzione più <span class=\'text-primary-color\'>adatta a te!</span>'"
+    :ChooseSolutionTitle="'Scegli la soluzione più <span class=\'text-primary-color\'><br>adatta a te!</span>'"
     :ChooseSolutionDescription="'Esplora la piattaforma HYKEE e acquista la soluzione che meglio risponde alle tue esigenze. Dal piano PLUS a soluzioni potenziate!'"
   />
   <PricesCard :cards="cards" />
@@ -54,6 +54,9 @@ const cards = ref([
       "Hykee Score per te e per 120 aziende di tuo interesse",
       "Business Rating con questionario SA",
       "Prospetti contabili degli ultimi due anni per te e per 120 aziende di tuo interessea",
+      "Business Rating con questionario SA",
+
+
     ],
     buttonText: "Attiva ora!",
   },

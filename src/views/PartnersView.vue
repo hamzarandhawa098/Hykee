@@ -15,7 +15,6 @@
     :section2Description2="section2Description2"
     :section3Title="'<span class=\'text-primary-color\'> Coinvolgi i tuoi clienti</span> e comunica in modo profilato ed efficace '"
     :section3Description1="section3Description1"
-    :section3Description2="section3Description2"
   />
   <Analyze
     :MoreInformationBg="MoreInformationBg"
@@ -24,7 +23,7 @@
     :ButtonText="'Contactti'"
   />
   <Solutions 
-  :solutionTitle="' Scegli la soluzione più<span class=\'text-primary-color\'> adatta a te!</span>  '"
+  :solutionTitle="' Scegli la soluzione più<span class=\'text-primary-color\'><br> adatta a te!</span>  '"
   :plans="plans"
  
   />
@@ -68,11 +67,9 @@ const section2Description2 = ref(
 );
 
 const section3Description1 = ref(
-  "L’analisi di bilancio è importante ma la capacità di un business di competere sul mercato è frutto delle sue persone, dei prodotti, dei modelli di business e della capacità di adattamento."
+  "L’analisi di bilancio è importante ma la capacità di un business di competere sul mercato è frutto delle sue persone, dei prodotti, dei modelli di business e della capacità di adattamento.Pensata per condurre analisi approfondite coinvolgendo, in maniera amplificata dalla tecnologia e dalla consulenza, i tuoi clienti."
 );
-const section3Description2 = ref(
-  "Pensata per condurre analisi approfondite coinvolgendo, in maniera amplificata dalla tecnologia e dalla consulenza, i tuoi clienti."
-);
+
 
 
 

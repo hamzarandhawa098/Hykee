@@ -1,12 +1,12 @@
 <template>
-  <div class="text-white relative hidden lg:block overflow-hidden pb-28">
+  <div class="text-white relative hidden lg:block overflow-hidden pb-52">
     <img
       :src="AnalysisBgImage"
       alt="Background"
       class="absolute inset-0 w-full h-full object-cover opacity-10"
     />
     <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div class="flex flex-col items-center text-white py-12 space-y-3">
+      <div class="flex flex-col items-center text-white space-y-3">
         <div>
           <component :is="iconMain" />
         </div>
@@ -17,12 +17,12 @@
           {{ mainTitle }}
         </h2>
 
-        <p class="text-center font-normal text-base  font-monorope max-w-sm ">
+        <p class="text-center font-normal text-base font-monorope max-w-sm ">
           {{ mainDescription }}
         </p>
       </div>
       <div class="flex flex-wrap justify-center space-x-[60px]">
-        <div class="flex flex-col space-y-14 mt-10">
+        <div class="flex flex-col space-y-[95.5px] py-[51px]">
           <div
             v-for="(item, index) in leftItems"
             :key="'left-' + index"
@@ -54,7 +54,7 @@
           </div>
         </div>
 
-        <div class="flex flex-col space-y-14 mt-10">
+        <div class="flex flex-col space-y-[95.5px] py-[51px]">
           <div
             v-for="(item, index) in rightItems"
             :key="'right-' + index"

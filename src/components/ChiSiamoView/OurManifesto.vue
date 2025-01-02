@@ -1,13 +1,12 @@
 <template>
-  <div class=" py-0 lg:py-40">
+  <div class=" py-0 lg:py-40 px-4 lg:px-0">
     <div
-      class="flex flex-col lg:flex-row justify-between max-w-7xl mx-auto py-32 px-3"
+      class="flex flex-col lg:flex-row justify-evenly max-w-7xl mx-auto pt-[100px] lg:pt-0"
     >
       <div class="text-center max-w-xl lg:text-left z-10">
         <h1
-          class="text-5xl lg:text-[130px] font-normal text-primary-color font-coolvetica outline-text"
-        >
-          {{ OurManifestoTitle }}
+          class="text-5xl lg:text-[130px] text-left font-normal text-primary-color font-coolvetica outline-text"
+        v-html="OurManifestoTitle">
         </h1>
       </div>
       <div
@@ -18,9 +17,9 @@
       </div>
     </div>
     <div
-      class="flex flex-col lg:flex-row-reverse justify-between max-w-7xl mx-auto px-3"
+      class="flex flex-col lg:flex-row-reverse items-start justify-evenly  max-w-7xl mx-auto pt-[100px]"
     >
-      <div class="text-center max-w-xl lg:text-left z-10">
+      <div class="max-w-xl flex items-start lg:text-left z-10">
         <h1
           class="text-5xl lg:text-[130px] font-normal text-primary-color font-coolvetica outline-text"
         >
@@ -28,7 +27,7 @@
         </h1>
       </div>
       <div
-        class="mt-8 lg:mt-0 text-center lg:text-left lg:ml-12 max-w-lg text-gray-300 z-10"
+        class="mt-8 lg:mt-[40px] text-center lg:text-left lg:ml-12 max-w-lg text-gray-300 z-10"
       >
         <p class="mb-4 font-monorope text-sm font-normal" v-html="HowSeetheMarketDescription">
         </p>

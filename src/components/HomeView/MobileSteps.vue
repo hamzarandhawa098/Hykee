@@ -1,4 +1,4 @@
-<template>
+  <template>
   <div class="text-white px-4 py-6 space-y-20 max-w-4xl mx-auto">
     <h2 class="text-titleSecondary font-bold text-center lg:text-start font-sans w-full lg:w-1/3 mb-12" v-html="titleMobileSteps"></h2>
     <div
@@ -9,14 +9,14 @@
         index % 2 === 1 ? 'flex-row-reverse' : 'flex-row',
       ]"
     >
-      <div class="flex flex-col items-start space-x-2 py-7">
+      <div class="flex flex-col items-start py-7">
         <div
           :class="[
-            'flex items-center gap-4',
+            'flex items-center gap-5',
             index % 2 === 1 ? 'flex-row-reverse' : 'flex-row',
           ]"
         >
-          <h1 class="outline-text text-5xl font-bold">{{ step.number }}</h1>
+          <h1 class="outline-text tracking-widest text-5xl font-bold">{{ step.number }}</h1>
           <hr class="w-10 border-2 border-primary-color" />
         </div>
         <br />

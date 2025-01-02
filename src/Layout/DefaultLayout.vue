@@ -16,15 +16,15 @@
       <router-view />
     </transition>
     <MoreInformation
-    :MoreInformationBg="MoreInformationBg"
-    :MoreInformationText="'Desideri maggiori informazioni?'"
-    :MoreInformationButtonText="'Contattaci'"
-    :MoreInformationIcon="EnvelopeIcon"
-  />
-  <ContactForm
-    :ContactFormBg="ContactFormBg"
-    :contactFormTitle="'Stay tuned!'"
-  />
+      :MoreInformationBg="MoreInformationBg"
+      :MoreInformationText="'Desideri maggiori informazioni?'"
+      :MoreInformationButtonText="'Contattaci'"
+      :MoreInformationIcon="EnvelopeIcon"
+    />
+    <ContactForm
+      :ContactFormBg="ContactFormBg"
+      :contactFormTitle="'Stay tuned!'"
+    />
     <Footer
       :Logo="Logo"
       :footerSections="footerSections"
@@ -32,7 +32,6 @@
       :data="data"
     />
     <ContattiPopup v-if="showPopup" @close="closePopup" />
-
   </div>
 </template>
 <script setup>
@@ -157,11 +156,12 @@ const data = ref({
 });
 </script>
 <style>
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.5s ease;
 }
-.fade-enter-from, .fade-leave-to {
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
 }
-
 </style>

@@ -1,18 +1,18 @@
 <template>
-  <section class="text-white py-20" v-if="isHomePage">
+  <section class="text-white py-12 bg-home-footer-bg" v-if="isHomePage">
     <div class="flex flex-col-reverse lg:flex-col justify-center items-center">
       <div
-        class="max-w-7xl mx-auto w-full flex flex-wrap space-y-12 lg:space-y-0 md:justify-between gap-8 px-10 lg:px-0 text-left"
+        class="max-w-[933px] pt-[90.37px] mx-auto w-full flex flex-wrap space-y-12 lg:space-y-0 md:justify-between gap-8 px-10 lg:px-0 text-left"
       >
         <div
           v-for="(section, index) in footerSections"
           :key="index"
           class="w-full md:w-auto flex-shrink-0"
         >
-          <h3 class="font-medium leading-7 font-monorope text-lg mb-4">
+          <h3 class="font-medium leading-7 font-monorope text-lg pb-[16px]">
             {{ section.heading }}
           </h3>
-          <ul class="space-y-2">
+          <ul class="space-y-1">
             <li v-for="(link, linkIndex) in section.links" :key="linkIndex">
               <router-link
                 :to="link.href"
@@ -25,7 +25,7 @@
         </div>
       </div>
       <div
-        class="mt-20 mb-12 lg:mb-0 flex items-center justify-start lg:justify-center px-8 lg:px-0 w-full"
+        class="pt-[106px] lg:mb-0 flex items-center justify-start lg:justify-center px-8 lg:px-0 w-full"
       >
         <div class="w-1/3 h-px hidden lg:block bg-white"></div>
         <component :is="Logo" class="w-24 mx-4" />
@@ -38,18 +38,18 @@
       </p>
     </div>
   </section>
-  <section class="relative bg-footer-bg-color text-white pt-20" v-else>
+  <section class="relative bg-footer-bg-color text-white pt-[95px]" v-else>
     <div class="max-w-6xl mx-auto w-full">
       <img
         :src="FooterBg"
         alt="Footer background"
-        class="absolute inset-0 w-full h-full object-cover opacity-100 pointer-events-none"
+        class="absolute hidden lg:block inset-0 w-7/8 h-7/8 object-cover opacity-100 pointer-events-none"
         style="object-position: center"
       />
-      <div class="flex flex-col lg:flex-row gap-16">
+      <div class="flex flex-col lg:flex-row gap-16 ">
         <div class="max-w-64 lg:mx-auto ml-14 lg:ml-0">
           <component :is="Logo" />
-          <p class="text-sm text-footer-links font-normal mt-8">
+          <p class="text-sm text-footer-links font-normal mt-8 font-monorope">
             {{ data.description }}
           </p>
           <div class="flex space-x-4 mt-4">
@@ -64,92 +64,92 @@
             </router-link>
           </div>
         </div>
-        
-          <div
-            class="ml-14 lg:ml-0 mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 relative py-16"
-          >
-            <div>
-              <h3
-                class="font-medium font-monorope text-xl text-primary-color mb-4"
-              >
-                {{ data.platformLinksTitle }}
-              </h3>
-              <ul class="space-y-4">
-                <li v-for="(link, index) in data.platformLinks" :key="index">
-                  <router-link
-                    :to="link.href"
-                    class="text-footer-links-text text-base font-normal hover:text-gray-200"
-                  >
-                    {{ link.text }}
-                  </router-link>
-                </li>
-              </ul>
-            </div>
 
-            <div>
-              <h3
-                class="font-medium font-monorope text-xl text-primary-color mb-4"
-              >
-                {{ data.supportLinksTitle }}
-              </h3>
-              <ul class="space-y-4">
-                <li v-for="(link, index) in data.supportLinks" :key="index">
-                  <router-link
-                    :to="link.href"
-                    class="text-footer-links-text text-base font-normal hover:text-gray-200"
-                  >
-                    {{ link.text }}
-                  </router-link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3
-                class="font-medium font-monorope text-xl text-primary-color mb-4"
-              >
-                {{ data.aboutLinksTitle }}
-              </h3>
-              <ul class="space-y-4">
-                <li v-for="(link, index) in data.aboutLinks" :key="index">
-                  <router-link
-                    :to="link.href"
-                    class="text-footer-links-text text-base font-normal hover:text-gray-200"
-                  >
-                    {{ link.text }}
-                  </router-link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3
-                class="font-medium font-monorope text-xl text-primary-color mb-4"
-              >
-                {{ data.appLinksTitle }}
-              </h3>
-              <div class="mt-4 space-y-4">
-                <router-link :to="data.appLinks.playStore.src" class="block">
-                  <img
-                    :src="data.appLinks.playStore.src"
-                    :alt="data.appLinks.playStore.alt"
-                    class="h-10"
-                  />
+        <div
+          class="ml-14 lg:ml-16 mx-auto grid grid-cols-1 md:grid-cols-4 gap-3 relative py-16"
+        >
+          <div>
+            <h3
+              class="font-medium font-monorope text-xl text-primary-color mb-10"
+            >
+              {{ data.platformLinksTitle }}
+            </h3>
+            <ul class="space-y-4">
+              <li v-for="(link, index) in data.platformLinks" :key="index">
+                <router-link
+                  :to="link.href"
+                  class="text-footer-links-text text-base font-normal hover:text-gray-200"
+                >
+                  {{ link.text }}
                 </router-link>
-                <router-link :to="data.appLinks.appleStore.src" class="block">
-                  <img
-                    :src="data.appLinks.appleStore.src"
-                    :alt="data.appLinks.appleStore.alt"
-                    class="h-10"
-                  />
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3
+              class="font-medium font-monorope text-xl text-primary-color mb-10"
+            >
+              {{ data.supportLinksTitle }}
+            </h3>
+            <ul class="space-y-4">
+              <li v-for="(link, index) in data.supportLinks" :key="index">
+                <router-link
+                  :to="link.href"
+                  class="text-footer-links-text text-base font-normal hover:text-gray-200"
+                >
+                  {{ link.text }}
                 </router-link>
-              </div>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3
+              class="font-medium font-monorope text-xl text-primary-color mb-10"
+            >
+              {{ data.aboutLinksTitle }}
+            </h3>
+            <ul class="space-y-4">
+              <li v-for="(link, index) in data.aboutLinks" :key="index">
+                <router-link
+                  :to="link.href"
+                  class="text-footer-links-text text-base font-normal hover:text-gray-200"
+                >
+                  {{ link.text }}
+                </router-link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3
+              class="font-medium font-monorope text-xl text-primary-color mb-10"
+            >
+              {{ data.appLinksTitle }}
+            </h3>
+            <div class="mt-4 space-y-4">
+              <router-link :to="data.appLinks.playStore.src" class="block">
+                <img
+                  :src="data.appLinks.playStore.src"
+                  :alt="data.appLinks.playStore.alt"
+                  class="h-10"
+                />
+              </router-link>
+              <router-link :to="data.appLinks.appleStore.src" class="block">
+                <img
+                  :src="data.appLinks.appleStore.src"
+                  :alt="data.appLinks.appleStore.alt"
+                  class="h-10"
+                />
+              </router-link>
             </div>
           </div>
         </div>
       </div>
+    </div>
     <div
-      class="mt-8 text-right text-footer-links bg-black py-2 px-14 w-full text-sm relative"
+      class="pt-[25px] pb-[23px] text-right text-footer-links bg-black py-2 px-14 w-full text-sm relative"
     >
       {{ data.copyright }}
     </div>

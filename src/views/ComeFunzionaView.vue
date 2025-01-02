@@ -27,7 +27,6 @@
     :StartGrowingButtonText="'Iscriviti ora'"
     :StartGrowingTitleText="'Hey!'"
   />
-  
 </template>
 <script setup>
 import { ref } from "vue";
@@ -43,13 +42,14 @@ import StartGrowingAnimation from "@/assets/images/StartGrowingAnimation.png";
 
 import MobileSteps from "@/components/HomeView/MobileSteps.vue";
 
-const AnalyzeText = ref(
-  "Analizza il tuo business<br>Osserva il mercato<br>Ottimizza la strategia di crescita!"
-);
-
+const AnalyzeText = ref(`
+  <div>Analizza il tuo business</div>
+  <div class="lg:ml-4 mb-3 mt-3">Osserva il mercato</div>
+  <div class="lg:ml-8  ">Ottimizza la strategia di crescita!</div>
+`);
 const steps = [
   {
-    number: "01",
+    number: "01", 
     description: "Attiva il tuo profilo Partner",
     image: RightMobile,
   },

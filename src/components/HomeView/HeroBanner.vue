@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center text-white py-12 px-4 relative">
+  <div class="flex flex-col items-center text-white relative">
     <img
       :src="HeroBackground"
       alt="Background"
@@ -7,20 +7,19 @@
     />
     <div class="max-w-[634px] w-full relative z-10">
       <div
-        class="text-center font-sans text-4xl md:text-title leading-[50px] md:leading-[66px] font-bold mb-6 z-10"
+        class="text-center font-sans pt-[31px] text-5xl md:text-title leading-[50px] md:leading-[66px] font-bold mb-6 z-10"
         v-html="HeroBannerText"
       ></div>
 
-      <div class="relative flex justify-center items-center">
-        <img :src="HeroCircle" alt="Circles" class="absolute w-[543px] h-auto" />
+      <div class="flex justify-center items-center px-[45.5px]">
         <img
           :src="HeroMainImage"
           alt="Phone Preview"
-          class="z-10 w-[32rem] h-[380px]"
+          class="z-10 w-full h-auto lg:w-[543px] lg:h-[393px]"
         />
       </div>
 
-      <div class="flex space-x-4 justify-center mt-7">
+      <div class="flex space-x-4 justify-center px-[147px]">
   <img
     :src="AppleStore"
     alt="Download on App Store"

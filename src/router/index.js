@@ -45,6 +45,7 @@ const router = createRouter({
       name: 'faq',
       component: FaqView,
     },
+    
   ],
 })
 

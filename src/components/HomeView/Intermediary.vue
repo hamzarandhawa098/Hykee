@@ -7,10 +7,10 @@
       />
   
       <div class="relative max-w-7xl w-full mx-auto z-10 text-center py-12">
-        <h1 class="text-5xl font-sans leading-[64px] font-bold">{{ IntermediaryTitleText }}</h1>
-        <p class="text-base font-monorope font-light">{{ IntermediaryDescription }}</p>
+        <h1 class="text-5xl font-sans leading-[48px] lg:leading-[64px] font-bold pb-[18px] lg:pb-0">{{ IntermediaryTitleText }}</h1>
+        <p class="lg:text-base text-[13px] font-monorope font-light pb-[40px]">{{ IntermediaryDescription }}</p>
         <Button 
-          class="px-4 py-2 mt-4 w-1/2 lg:w-auto">
+          class="w-[236px] h-[44px]">
           {{ IntermediaryButtonText }}
         </Button>
       </div>

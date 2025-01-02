@@ -1,5 +1,5 @@
 <template>
-    <div class="relative max-w-7xl mx-auto w-full text-white p-6">
+    <div class="relative max-w-4xl mx-auto w-full text-white pt-[100px]">
       <div v-if="!isTableOpen" class="relative w-full rounded-lg overflow-hidden">
         <img
           :src="ComparisonBg"

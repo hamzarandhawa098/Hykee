@@ -1,28 +1,28 @@
 <template>
-  <div class="relative min-h-screen flex items-center justify-center z-10">
+  <div class="relative  flex justify-center">
     <img
       :src="ContactFormBg"
       alt="Background"
       class="absolute inset-0 w-full h-full object-cover"
     />
 
-    <div class="absolute inset-0 flex justify-center items-center">
+    <div class="inset-0 py-[100px] flex justify-center items-start">
       <div
-        class="relative bg-opacity-90 text-white p-8 rounded-lg max-w-3xl w-full"
+        class="relative text-white rounded-lg max-w-3xl w-full"
       >
         <h3
-          class="text-curiosText font-sans leading-[52px] font-bold text-center mb-8"
+          class="text-curiosText font-sans leading-[52px] font-bold text-center pb-[118px]"
         >
           {{ contactFormTitle }}
         </h3>
-        <form @submit.prevent="handleSubmit" class="space-y-6">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <form @submit.prevent="handleSubmit">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-y-7 gap-x-8">
             <div>
               <input
                 v-model="form.nome"
                 type="text"
                 placeholder="Nome"
-                class="bg-transparent border border-white rounded-full px-14 lg:px-20 py-3 focus:outline-none focus:ring-2"
+                class="bg-transparent border border-white rounded-full w-[380px] px-5 h-[50px] focus:outline-none focus:ring-2"
                 :class="{
                   'ring-red-500 border-red-500': errors.nome,
                   'focus:ring-primary-color': !errors.nome,
@@ -37,7 +37,7 @@
                 v-model="form.cognome"
                 type="text"
                 placeholder="Cognome"
-                class="bg-transparent border border-white rounded-full px-14 lg:px-20 py-3 focus:outline-none focus:ring-2"
+                class="bg-transparent border border-white rounded-full w-[380px] px-5 h-[50px] focus:outline-none focus:ring-2"
                 :class="{
                   'ring-red-500 border-red-500': errors.cognome,
                   'focus:ring-primary-color': !errors.cognome,
@@ -52,7 +52,7 @@
                 v-model="form.email"
                 type="email"
                 placeholder="Email"
-                class="bg-transparent border border-white rounded-full px-14 lg:px-20 py-3 focus:outline-none focus:ring-2"
+                class="bg-transparent border border-white rounded-full w-[380px] px-5 h-[50px] focus:outline-none focus:ring-2"
                 :class="{
                   'ring-red-500 border-red-500': errors.email,
                   'focus:ring-primary-color': !errors.email,
@@ -67,7 +67,7 @@
                 v-model="form.telefono"
                 type="text"
                 placeholder="Telefono"
-                class="bg-transparent border border-white rounded-full px-14 lg:px-20 py-3 focus:outline-none focus:ring-2"
+                class="bg-transparent border border-white rounded-full w-[380px] px-5 h-[50px] focus:outline-none focus:ring-2"
                 :class="{
                   'ring-red-500 border-red-500': errors.telefono,
                   'focus:ring-primary-color': !errors.telefono,
@@ -78,7 +78,7 @@
               </p>
             </div>
           </div>
-          <div class="flex justify-between">
+          <div class="flex justify-between pt-[43px]">
             <div class="flex items-center gap-3">
               <label class="relative flex items-center cursor-pointer">
                 <input
@@ -114,7 +114,7 @@
               {{ errors.privacyPolicy }}
             </p>
             <div class="px-4">
-              <Button type="submit" class="px-6 py-2"> Invia </Button>
+              <Button type="submit" class="w-[98px] h-[44px]"> Invia </Button>
             </div>
           </div>
         </form>

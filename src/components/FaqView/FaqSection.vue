@@ -1,9 +1,9 @@
 <template>
-    <div class="space-y-10">
+    <div class="space-y-10 pb-32">
       <div class="max-w-5xl  mx-auto w-full overflow-hidden" v-for="(faqItem, index) in faqData.items" :key="index">
         <div
           :class="[
-            'flex items-center justify-between lg:px-12 px-8 py-24 lg:py-0 bg-faqQuestionBg h-[145px] text-white cursor-pointer mainBar',
+            'flex items-center justify-between lg:px-12 px-8 py-24 border border-primary-color lg:py-0 bg-faqQuestionBg h-[145px] text-white cursor-pointer mainBar',
             { active: isOpen[index] },
           ]"
         >
@@ -20,7 +20,7 @@
               </p>
             </div>
           </div>
-          <div>
+          <div class=" items-center flex">
             <span
               class="text-primary-color font-semibold font-coolvetica text-3xl lg:text-[133px] "
               v-if="isOpen[index]"
@@ -38,8 +38,8 @@
           </div>
         </div>
   
-        <div v-if="isOpen[index]" class="bg-white pb-12 pt-10 lg:pt-0">
-          <div class="space-y-6 px-8 lg:px-0 max-w-3xl mx-auto w-full">
+        <div v-if="isOpen[index]" class="bg-white py-[50px]">
+          <div class="space-y-12 px-8 lg:px-0 max-w-3xl mx-auto w-full">
             <div v-for="(item, index) in faqItem.items" :key="index">
               <h4 class="font-semibold text-card-button-active mb-2">
                 {{ item.question }}
