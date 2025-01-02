@@ -1,5 +1,5 @@
 <template>
-  <div class="relative text-white py-20 px-3">
+  <div class="relative text-white lg:py-20 px-3">
     <img
       :src="consultancyBg"
       alt="Circular Background"
