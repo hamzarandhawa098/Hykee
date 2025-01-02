@@ -1,5 +1,5 @@
 <template>
-  <div class="relative text-white py-20">
+  <div class="relative text-white py-20 px-3">
     <img
       :src="consultancyBg"
       alt="Circular Background"
@@ -28,7 +28,7 @@
               {{ section1Button2 }}
             </button>
           </div>
-          <div class="lg:pt-64 lg:pl-12">
+          <div class="lg:pt-64 pt-24 lg:pl-12">
             <h2
               class="text-titleTertiary font-sans font-bold w-full lg:max-w-lg text-center lg:text-left"
               v-html="section1Title2"
@@ -36,7 +36,7 @@
           </div>
         </div>
 
-        <div class="relative flex-1 pl-[58.14px]">
+        <div class="relative flex-1 justify-center pl-[32px] lg:pl-[58.14px]">
           <img
             :src="consultancyToolsImg"
             alt="Phone Display"
@@ -46,7 +46,7 @@
       </div>
 
       <div
-        class="  flex flex-col pl-[70px] md:flex-row items-center gap-8 relative z-10 py-28"
+        class="  flex flex-col lg:pl-[70px] md:flex-row items-center gap-8 relative z-10 py-28"
       >
         <div class="relative flex">
           <img
@@ -78,7 +78,7 @@
       <div
         class="mt-16 flex flex-col md:flex-row  justify-start relative z-10"
       >
-        <div class="max-w-lg text-center md:text-left  mr-44  ml-24">
+        <div class="max-w-lg text-center md:text-left  lg:mr-44 lg:ml-24">
           <h2
             class="text-titleTertiary font-sans font-bold leading-9"
             v-html="section3Title"
