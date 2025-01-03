@@ -40,7 +40,7 @@
     :curiosButtonText="'Vedi tutte le funzionalità'"
     :CuriosBgImage="CuriosBgImage"
   />
-  <StartGrddowing
+  <StartGrowing
     :StartGrowingImage="StartGrowingImage"
     :StartGrowingText="'Inizia a crescere è GRATIS! '"
     :StartGrowingDescription="'Una piattaforma tecnologica a supporto delle tue decisioni strategiche.'"
