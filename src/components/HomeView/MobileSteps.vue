@@ -1,11 +1,11 @@
   <template>
-  <div class="text-white px-4 py-6 space-y-20 max-w-4xl mx-auto">
+  <div class="text-white space-y-20 max-w-[340px] mb-[150px] lg:max-w-4xl mx-auto">
     <h2 class="text-titleSecondary font-bold text-center lg:text-start font-sans w-full lg:w-1/3 mb-12" v-html="titleMobileSteps"></h2>
     <div
       v-for="(step, index) in steps"
       :key="index"
       :class="[
-        'flex items-start space-y-4',
+        'flex items-start space-y-4 gap-x-5',
         index % 2 === 1 ? 'flex-row-reverse' : 'flex-row',
       ]"
     >
@@ -20,7 +20,7 @@
           <hr class="w-10 border-2 border-primary-color" />
         </div>
         <br />
-        <p class="text-sm font-normal font-monorope leading-[23px]">
+        <p class="text-[13px] max-w-[174px] lg:max-w-[340px] lg:text-sm font-normal font-monorope leading-[23px]">
           {{ step.description }}
         </p>
       </div>

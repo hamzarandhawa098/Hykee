@@ -1,32 +1,32 @@
 <template>
-  <div class="text-white relative hidden lg:block overflow-hidden pb-52">
+  <div class="text-white relative hidden lg:block overflow-hidden mt-[80px] mb-[206px]">
     <img
       :src="AnalysisBgImage"
       alt="Background"
       class="absolute inset-0 w-full h-full object-cover opacity-10"
     />
-    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-      <div class="flex flex-col items-center text-white space-y-3">
+    <div class="max-w-[1285px] mx-auto w-full">
+      <div class="flex flex-col max-w-[395px] mb-[41px] mx-auto items-center text-white space-y-4">
         <div>
           <component :is="iconMain" />
         </div>
 
         <h2
-          class="text-[25px] font-bold font-sans uppercase tracking-wide text-center"
+          class="text-[25px] font-bold font-sans leading-[37.5px] uppercase tracking-wide text-center"
         >
           {{ mainTitle }}
         </h2>
 
-        <p class="text-center font-normal text-base font-monorope max-w-sm ">
+        <p class="text-center font-normal leading-6 text-[16px] font-monorope ">
           {{ mainDescription }}
         </p>
       </div>
-      <div class="flex flex-wrap justify-center space-x-[60px]">
-        <div class="flex flex-col space-y-[95.5px] py-[51px]">
+      <div class="flex justify-center gap-[60px]">
+        <div class="flex flex-col my-[51px] gap-y-[95.5px] max-w-[395px]">
           <div
             v-for="(item, index) in leftItems"
             :key="'left-' + index"
-            class="flex flex-col items-end text-white py-6 space-y-3"
+            class="flex flex-col items-end text-white space-y-4"
           >
             <div>
               <component :is="item.icon" />
@@ -38,8 +38,7 @@
               {{ item.title }}
             </h2>
 
-            <p class="text-right font-normal text-base  font-monorope max-w-xs">
-              {{ item.description }}
+            <p class="text-right font-normal text-[16px] leading-6  font-monorope" v-html="item.description">
             </p>
           </div>
         </div>
@@ -49,16 +48,16 @@
             <img
               :src="AnalysisMobileImage"
               alt="Mobile Phone"
-              class="w-[375px] h-auto rounded-2xl"
+              class="w-[375px] h-[812px] rounded-2xl"
             />
           </div>
         </div>
 
-        <div class="flex flex-col space-y-[95.5px] py-[51px]">
+        <div class="flex flex-col my-[51px] gap-y-[95.5px]">
           <div
             v-for="(item, index) in rightItems"
             :key="'right-' + index"
-            class="flex flex-col items-start text-white py-6 space-y-3"
+            class="flex flex-col items-start text-white space-y-4"
           >
             <div>
               <component :is="item.icon" />
@@ -70,8 +69,7 @@
               {{ item.title }}
             </h2>
 
-            <p class="text-left font-normal text-base  font-monorope max-w-xs ">
-              {{ item.description }}
+            <p class="text-left font-normal text-[16px] leading-6 font-monorope" v-html="item.description">
             </p>
           </div>
         </div>

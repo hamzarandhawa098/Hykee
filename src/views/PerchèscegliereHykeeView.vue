@@ -22,7 +22,6 @@
 
   <StartGrowing
     :StartGrowingImage="StartGrowingImage"
-    :StartGrowingAnimation="StartGrowingAnimation"
     :StartGrowingText="'Prova Hykee Gratis! '"
     :StartGrowingDescription="'Una piattaforma tecnologica a supporto delle tue decisioni strategiche.'"
     :StartGrowingButtonText="'Iniziamo!'"
@@ -38,7 +37,6 @@ import LeftMobile from "@/assets/images/LeftMobile.png";
 import RightMobile from "@/assets/images/RightMobile.png";
 import StartGrowing from "@/components/HomeView/StartGrowing.vue";
 import StartGrowingImage from "@/assets/images/StartGrowingImage.png";
-import StartGrowingAnimation from "@/assets/images/StartGrowingAnimation.png";
 
 
 const steps = [

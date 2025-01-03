@@ -2,17 +2,17 @@
   <section class="text-white py-12 bg-home-footer-bg" v-if="isHomePage">
     <div class="flex flex-col-reverse lg:flex-col justify-center items-center">
       <div
-        class="max-w-[933px] pt-[90.37px] mx-auto w-full flex flex-wrap space-y-12 lg:space-y-0 md:justify-between gap-8 px-10 lg:px-0 text-left"
+        class="max-w-[933px]  mx-auto w-full flex flex-wrap lg:space-y-0 md:justify-between px-10 lg:px-0 text-left"
       >
         <div
           v-for="(section, index) in footerSections"
           :key="index"
-          class="w-full md:w-auto flex-shrink-0"
+          class="w-full md:w-auto pt-[80px] lg:pt-[90.37px]"
         >
           <h3 class="font-medium leading-7 font-monorope text-lg pb-[16px]">
             {{ section.heading }}
           </h3>
-          <ul class="space-y-1">
+          <ul class="gap-y-3">
             <li v-for="(link, linkIndex) in section.links" :key="linkIndex">
               <router-link
                 :to="link.href"
@@ -25,15 +25,15 @@
         </div>
       </div>
       <div
-        class="pt-[106px] lg:mb-0 flex items-center justify-start lg:justify-center px-8 lg:px-0 w-full"
+        class=" flex  mt-[106px] items-center justify-start lg:justify-center px-8 lg:px-0 w-full"
       >
         <div class="w-1/3 h-px hidden lg:block bg-white"></div>
         <component :is="Logo" class="w-24 mx-4" />
         <div class="w-1/3 h-px bg-white hidden lg:block"></div>
       </div>
     </div>
-    <div class="flex justify-start px-10 lg:justify-center lg:px-0">
-      <p class="text-sm text-footer-links font-normal font-monorope mt-8">
+    <div class="flex justify-start mt-[100px] lg:mt-[38px] px-10 lg:justify-center lg:px-0">
+      <p class="text-sm text-footer-links font-normal font-monorope">
         {{ footerMeta }}
       </p>
     </div>

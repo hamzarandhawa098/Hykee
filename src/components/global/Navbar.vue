@@ -1,25 +1,25 @@
 <template>
-  <nav class="flex justify-between items-center px-[46.5px]  text-white">
-    <div class="lg:pt-[39.6px] pt-[20.62px]"
+  <nav class="flex justify-between items-end max-w-[1347px] mx-[46.5px]  text-white lg:pt-[41px]">
+    <div
     >
       <router-link to="/">
         <component :is="Logo" />
       </router-link>
     </div>
 
-    <ul class="hidden lg:flex space-x-[21px] pt-[47.5px] pb-[10.5px]">
+    <ul class="hidden lg:flex space-x-[21px] pl-[40px]">
       <li v-for="(item, index) in menuItems" :key="index">
         <router-link
           :to="item.href"
           @click.prevent="item.text === 'Contatti' ? emitContactClick() : null"
-          class="font-monorope text-sm font-normal hover:text-primary-color cursor-pointer"
+          class="font-monorope text-sm font-normal hover:text-primary-color active:text-primary-color cursor-pointer"
           >{{ item.text }}
         </router-link>
       </li>
     </ul>
 
     <div
-      class="hidden lg:flex items-center space-x-3.5 cursor-pointer pt-[37px]"
+      class="hidden lg:flex items-center space-x-3.5 cursor-pointer"
     >
       <button
         class="text-white font-monorope font-extrabold text-sm hover:text-primary-color"

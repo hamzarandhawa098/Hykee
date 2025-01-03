@@ -6,17 +6,17 @@
       class="absolute inset-0 w-full h-full object-cover"
     />
 
-    <div class="inset-0 py-[100px] flex justify-center items-start">
+    <div class="inset-0 flex justify-center items-start pt-[100px] pb-[176px]">
       <div
-        class="relative text-white rounded-lg max-w-3xl w-full"
+        class="relative text-white rounded-lg mx-auto max-w-[793px] w-full"
       >
         <h3
-          class="text-curiosText font-sans leading-[52px] font-bold text-center pb-[118px]"
+          class="text-curiosText font-sans pb-[118px] leading-[52px] font-bold text-center"
         >
           {{ contactFormTitle }}
         </h3>
         <form @submit.prevent="handleSubmit">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-y-7 gap-x-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-y-[27px] gap-x-[32px]">
             <div>
               <input
                 v-model="form.nome"
@@ -113,7 +113,7 @@
             <p v-if="errors.privacyPolicy" class="text-red-500 text-sm mt-1">
               {{ errors.privacyPolicy }}
             </p>
-            <div class="px-4">
+            <div>
               <Button type="submit" class="w-[98px] h-[44px]"> Invia </Button>
             </div>
           </div>

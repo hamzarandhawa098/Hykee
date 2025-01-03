@@ -1,89 +1,52 @@
 <template>
-  <div class="relative text-white lg:py-20 px-3">
-    <img
-      :src="consultancyBg"
-      alt="Circular Background"
-      class="absolute inset-0 w-auto h-full object-cover opacity-100 z-0"
-    />
+  <div class="relative text-white lg:mt-[101px] px-3 lg:py-32">
+    <div>
+      <img
+        :src="ConsultancyAnimation"
+        alt=""
+        class="absolute hidden lg:block bottom-[592px] right-[20px]"
+      />
+    </div>
     <div class="max-w-6xl mx-auto w-full">
-      <div
-        class="relative flex flex-col md:flex-row items-start pt-[150px] gap-8 z-10"
-      >
-        <div class="relative flex-1 text-center md:text-left">
-          <h2
-            class="text-titleTertiary font-sans font-bold"
-            v-html="section1Title1"
-          ></h2>
-          <p class="mt-8 font-normal text-base font-monorope">
-            {{ section1Description1 }}
-          </p>
-          <p class="mt-6 font-normal text-base font-monorope">
-            {{ section1Description2 }}
-          </p>
-          <div class="mt-8 space-x-4">
-            <Button class="w-[244px] h-[44px]">{{ section1Button1 }}</Button>
-            <button
-              class="bg-transparent text-solution-features border rounded-lg border-solution-features w-[121px] h-[44px]"
-            >
-              {{ section1Button2 }}
-            </button>
-          </div>
-          <div class="lg:pt-64 pt-24 lg:pl-12">
-            <h2
-              class="text-titleTertiary font-sans font-bold w-full lg:max-w-lg text-center lg:text-left"
-              v-html="section1Title2"
-            ></h2>
-          </div>
-        </div>
-
-        <div class="relative flex-1 justify-center pl-[32px] lg:pl-[58.14px]">
-          <img
-            :src="consultancyToolsImg"
-            alt="Phone Display"
-            class="relative z-10 mx-auto md:mx-0"
-          />
-        </div>
+      <div class="relative lg:absolute top-[101px]">
+        <h2
+          class="text-titleTertiary font-sans font-bold w-full lg:max-w-lg text-center lg:text-left pb-[80px]"
+          v-html="section1Title2"
+        ></h2>
       </div>
-
       <div
-        class="  flex flex-col lg:pl-[70px] md:flex-row items-center gap-8 relative z-10 py-28"
+        class="flex flex-col w-full md:flex-row items-center relative lg:gap-[19px] z-10 py-[44px] lg:pt-[278px]"
       >
-        <div class="relative flex">
+        <div class="relative flex mx-auto">
           <img
             :src="leftMobile"
             alt="Phone Display"
-            class="relative z-10 mx-auto md:mx-0"
+            class="relative z-10  mx-auto md:mx-0"
           />
         </div>
         <div class="flex-1 text-center md:text-left">
-          <div class="max-w-xl mx-auto">
+          <div class="max-w-xl">
             <h2
               class="text-titleTertiary font-sans font-bold"
               v-html="section2Title"
             ></h2>
-            <h2
-              class="text-titleTertiary font-sans font-bold"
-              v-html="section2Title"
-            ></h2>
-            <p class="mt-8 font-normal text-base font-monorope">
-              {{ section2Description1 }}
-            </p>
-            <p class="mt-8 font-normal text-base font-monorope">
-              {{ section2Description2 }}
+            <p class="font-normal text-base font-monorope" v-html="section2Description1">
             </p>
           </div>
         </div>
       </div>
 
       <div
-        class="mt-16 flex flex-col md:flex-row  justify-start relative z-10"
+        class="lg:mt-16 flex flex-col gap-[28px] md:flex-row justify-start relative z-10"
       >
-        <div class="max-w-lg text-center md:text-left  lg:mr-44 lg:ml-24">
+        <div class="max-w-lg text-center md:text-left lg:mr-44 lg:ml-24">
           <h2
             class="text-titleTertiary font-sans font-bold leading-9"
             v-html="section3Title"
           ></h2>
-          <p class="mt-8 font-normal max-w-[410px] w-full text-base font-monorope">
+          <p
+            class="mt-8 font-normal max-w-[410px] w-full text-base font-monorope"
+          >
             {{ section3Description1 }}
           </p>
         </div>
@@ -93,8 +56,12 @@
           <img
             :src="rightMobile"
             alt="Phone Display"
-            class="relative z-10 md:mx-0"
+            class="relative z-10 "
           />
+        </div>
+        <div> 
+          <img :src="ConsultancyAnimationBelow" alt=""
+          class="absolute hidden lg:block bottom-[-153px] right-[-128px]" />
         </div>
       </div>
     </div>
@@ -102,22 +69,17 @@
 </template>
 
 <script setup>
-import Button from "@/components/global/Button.vue";
+import ConsultancyAnimation from "@/assets/images/ConsultancyAnimation.png";
+import ConsultancyAnimationBelow from "@/assets/images/ConsultancyAnimationBelow.png";
+import ConsultancyMobileRight from "@/assets/images/ConsultancyMobileRight.png";
 defineProps({
-  section1Title1: String,
-  section1Description1: String,
-  section1Description2: String,
-  section1Button1: String,
-  section1Button2: String,
-  section1Title2: String,
-  consultancyBg: String,
-  consultancyToolsImg: String,
   leftMobile: String,
   rightMobile: String,
   section2Title: String,
   section2Description1: String,
   section2Description2: String,
   section3Title: String,
+  section1Title2: String,
   section3Description1: String,
   section3Description2: String,
 });

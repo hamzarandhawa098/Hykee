@@ -21,9 +21,8 @@
 
   <StartGrowing
     :StartGrowingImage="StartGrowingFunziona"
-    :StartGrowingAnimation="StartGrowingAnimation"
     :StartGrowingText="'Entra a far parte dell’ecosistema Hykee '"
-    :StartGrowingDescription="'Collegando la tua azienda ai Partner presenti sulla piattaforma HYKEE potrai ricevere un servizio di consulenza integrato e ottimizzato in cui le tue necessità sono al centro. Ricevi aggiornamenti mirati grazie ai sistemi di comunicazione one-to-one di HYKEE e concentrati sulla crescita del tuo business.'"
+    :StartGrowingDescription="'Collegando la tua azienda ai Partner presenti sulla piattaforma HYKEE potrai ricevere un servizio di consulenza integrato e ottimizzato in cui le tue necessità sono al centro. <span><br><br></span>Ricevi aggiornamenti mirati grazie ai sistemi di comunicazione one-to-one di HYKEE e concentrati sulla crescita del tuo business.'"
     :StartGrowingButtonText="'Iscriviti ora'"
     :StartGrowingTitleText="'Hey!'"
   />
@@ -35,10 +34,9 @@ import MobileStepsComeFunziona from "@/components/ComeFunzionaView/MobileStepsCo
 import MoreInformationBg from "@/assets/images/MoreInformationBg.png";
 import AnalyzeIcon from "@/components/icons/AnalyzeIcon.vue";
 import LeftMobile from "@/assets/images/LeftMobile.png";
-import RightMobile from "@/assets/images/RightMobile.png";
+import RightMobile from "@/assets/images/RightMobileCome.png";
 import StartGrowing from "@/components/HomeView/StartGrowing.vue";
 import StartGrowingFunziona from "@/assets/images/StartGrowingFunziona.png";
-import StartGrowingAnimation from "@/assets/images/StartGrowingAnimation.png";
 
 import MobileSteps from "@/components/HomeView/MobileSteps.vue";
 

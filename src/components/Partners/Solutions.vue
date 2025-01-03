@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-w-[900px]  mx-auto bg-solution-bg-color rounded-xl text-white h-auto flex items-center justify-center"
+    class="max-w-[938px] w-full mt-[32px] mb-[64px]  mx-auto bg-solution-bg-color rounded-xl text-white h-auto flex items-center justify-center"
   >
     <div class="text-center ">
       <h1

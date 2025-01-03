@@ -6,6 +6,7 @@
     :GooglePlay="GooglePlay"
     :HeroCircle="HeroCircle"
     :HeroBannerText="'The Augmented Advisory  <span class=\'text-primary-color\'>Platform to grow </span> your business '"
+    :HeroBannerTextMobile="'La miglior App per <span class=\'text-primary-color\'>business valutation </span>'"
   />
   <Intermediary
     class="lg:hidden"
@@ -16,14 +17,15 @@
   />
   <TechnologyConsultancy
     :LogoTransparent="LogoTransparent"
-    :TechText="'Tecnologia, consulenza, dati per  <span class=\'text-primary-color\'>cavalcare i mercati</span>'"
+    :TechText="'Tecnologia, consulenza, dati <span class=\'text-center\'><br> per  <span class=\'text-primary-color\'>cavalcare i mercati</span></span>'"
     :TechDescription="'La prima piattaforma di Advisory aumentata al mondo. Business, tecnologia, consulenza per imprimere alla tua azienda la crescita che merita'"
     :TitleTextMobile="'Perchè scegliere'"
   />
-  <MobileSteps class="lg:hidden" 
-  :LeftMobile="LeftMobile"
-  :RightMobile="RightMobile"
-  :steps="steps"
+  <MobileSteps
+    class="lg:hidden"
+    :LeftMobile="LeftMobile"
+    :RightMobile="RightMobile"
+    :steps="steps"
   />
   <Analysis
     :mainTitle="mainTitle"
@@ -38,9 +40,8 @@
     :curiosButtonText="'Vedi tutte le funzionalità'"
     :CuriosBgImage="CuriosBgImage"
   />
-  <StartGrowing
+  <StartGrddowing
     :StartGrowingImage="StartGrowingImage"
-    :StartGrowingAnimation="StartGrowingAnimation"
     :StartGrowingText="'Inizia a crescere è GRATIS! '"
     :StartGrowingDescription="'Una piattaforma tecnologica a supporto delle tue decisioni strategiche.'"
     :StartGrowingButtonText="'Iniziamo!'"
@@ -53,7 +54,6 @@
     :IntermediaryDescription="'Scopri le soluzioni HYKEE più adatte a te e ai tuoi clienti!'"
     :IntermediaryButtonText="'Scopri Hykee'"
   />
-
 </template>
 
 <script setup>
@@ -77,7 +77,6 @@ import Curios from "@/components/HomeView/Curios.vue";
 import CuriosBgImage from "@/assets/images/CuriosBg.png";
 import StartGrowing from "@/components/HomeView/StartGrowing.vue";
 import StartGrowingImage from "@/assets/images/StartGrowingImage.png";
-import StartGrowingAnimation from "@/assets/images/StartGrowingAnimation.png";
 import Intermediary from "@/components/HomeView/Intermediary.vue";
 import IntermediaryBg from "@/assets/images/IntermediaryBg.png";
 import MobileSteps from "@/components/HomeView/MobileSteps.vue";
@@ -96,19 +95,19 @@ const leftItems = ref([
     icon: Checkup,
     title: "Check up",
     description:
-      "Identifica le aree critiche e i punti diforza della tua organizzazione",
+      "Identifica le aree critiche e i punti di <span><br>forza della tua organizzazione</span>",
   },
   {
     icon: Networking,
     title: "Networking",
     description:
-      "Connettiti con i tuoi professionisti per ottenere servizi profilati",
+      "Connettiti con i tuoi professionisti <span><br></span>per ottenere servizi profilati",
   },
   {
     icon: Planning,
     title: "Planning",
     description:
-      "Scopri il tuo hykee score e imposta un percorso di crescita assieme ai consulenti di business HYKEE",
+      "Scopri il tuo hykee score e imposta <span><br></span>un percorso di crescita assieme ai <span><br></span>consulenti di business HYKEE",
   },
 ]);
 
@@ -116,7 +115,7 @@ const rightItems = ref([
   {
     icon: Database,
     title: "Database",
-    description: "Accedi al database completo delle aziende italiane",
+    description: "Accedi al database completo <span><br></span>delle aziende italiane",
   },
   {
     icon: News,
@@ -127,7 +126,7 @@ const rightItems = ref([
     icon: Comparison,
     title: "Comparison",
     description:
-      "Scopri come la tua azienda si rapporta al mercato e ai principali competitor",
+      "Scopri come la tua azienda si rapporta <span><br></span>al mercato e ai principali competitor",
   },
 ]);
 

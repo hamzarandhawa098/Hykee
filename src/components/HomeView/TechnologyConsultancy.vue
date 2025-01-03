@@ -1,11 +1,11 @@
 <template>
-  <div class=" w-full max-w-5xl mx-auto">
+  <div class=" w-full max-w-[340px] lg:max-w-[998.48px] mx-auto lg:mt-[100px] mb-[100px]">
     <div
-      class="text-white flex flex-col items-center text-start lg:text-center px-[50px] py-[100px]"
+      class="text-white flex flex-col items-center lg:items-start max-w-[898.48px] mx-auto text-start lg:text-center"
     >
       <div v-if="isHomePage">
         <div
-          class="text-4xl lg:text-title hidden lg:block font-sans font-bold lg:leading-[66px]"
+          class="text-4xl lg:text-title max-w-[823px] hidden lg:block font-sans font-bold lg:leading-[66px]"
           v-html="TechText"
         ></div>
         <div
@@ -22,7 +22,7 @@
         </div>
       </div>
       <div
-        class="flex flex-col lg:flex-row mt-6 justify-center items-center space-x-0 lg:space-x-12"
+        class="flex flex-col lg:flex-row mt-[15px] lg:justify-start lg:items-end gap-[35px] lg:gap-[70px]"
       >
         <div>
           <component
@@ -31,7 +31,7 @@
           />
         </div>
         <p
-          class="text-sm md:text-base text-left flex items-start mt-9 justify-center text-white leading-7 max-w-md"
+          class="text-[13px] lg:text-[16px] font-monorope font-normal text-left flex items-start justify-center text-white leading-6 lg:leading-7 w-full max-w-[420px]"
         >
           {{ TechDescription }}
         </p>
