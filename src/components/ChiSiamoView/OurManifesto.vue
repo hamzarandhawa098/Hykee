@@ -5,7 +5,7 @@
     >
       <div class="text-center lg:text-left z-10">
         <h1
-          class="text-5xl lg:text-[130px] text-left font-normal text-primary-color font-coolvetica outline-text"
+          class="text-5xl lg:text-[130px] text-justify font-normal text-primary-color font-coolvetica outline-text"
           v-html="OurManifestoTitle"
         ></h1>
       </div>

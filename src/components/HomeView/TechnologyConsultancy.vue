@@ -1,5 +1,5 @@
 <template>
-  <div class=" w-full max-w-[340px] lg:max-w-[998.48px] mx-auto lg:mt-[100px] mb-[100px]">
+  <div class=" w-full max-w-[340px] lg:max-w-[998.48px] mx-auto mt-[50px] lg:mt-[100px] mb-[100px]">
     <div
       class="text-white flex flex-col items-center lg:items-start max-w-[898.48px] mx-auto text-start lg:text-center"
     >

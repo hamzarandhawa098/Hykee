@@ -9,7 +9,9 @@
           class="text-titleTertiary font-sans font-bold"
           v-html="section1Title1"
         ></h2>
-        <p class="mt-8 font-normal text-base font-monorope" v-html="section1Description1">
+        <p class="mt-8 font-normal hidden lg:block text-base font-monorope" v-html="section1Description1">
+        </p>
+        <p class="mt-8 font-normal lg:hidden text-base font-monorope" v-html="section1DescriptionMob">
         </p>
         <div class=" mt-[48px]  space-x-5">
           <Button class="w-[244px] h-[44px]">{{ section1Button1 }}</Button>
@@ -37,6 +39,7 @@ import ContactInfo from "@/assets/images/ContactInfo.png";
 defineProps({
   section1Title1: String,
   section1Description1: String,
+  section1DescriptionMob: String,
   section1Description2: String,
   section1Button1: String,
   section1Button2: String,

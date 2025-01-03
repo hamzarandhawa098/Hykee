@@ -1,10 +1,10 @@
 <template>
-  <div class="relative text-white lg:mt-[101px] px-3 lg:py-32">
+  <div class="relative text-white lg:mt-[101px] px-4 lg:py-32">
     <div>
       <img
         :src="ConsultancyAnimation"
         alt=""
-        class="absolute hidden lg:block bottom-[592px] right-[20px]"
+        class="absolute hidden lg:block bottom-[776px] right-[20px]"
       />
     </div>
     <div class="max-w-6xl mx-auto w-full">
@@ -30,7 +30,9 @@
               class="text-titleTertiary font-sans font-bold"
               v-html="section2Title"
             ></h2>
-            <p class="font-normal text-base font-monorope" v-html="section2Description1">
+            <p class="font-normal text-base hidden lg:block font-monorope" v-html="section2Description1">
+            </p>
+            <p class="font-normal text-base lg:hidden font-monorope" v-html="section2DescriptionMob">
             </p>
           </div>
         </div>
@@ -71,13 +73,12 @@
 <script setup>
 import ConsultancyAnimation from "@/assets/images/ConsultancyAnimation.png";
 import ConsultancyAnimationBelow from "@/assets/images/ConsultancyAnimationBelow.png";
-import ConsultancyMobileRight from "@/assets/images/ConsultancyMobileRight.png";
 defineProps({
   leftMobile: String,
   rightMobile: String,
   section2Title: String,
   section2Description1: String,
-  section2Description2: String,
+  section2DescriptionMob: String,
   section3Title: String,
   section1Title2: String,
   section3Description1: String,

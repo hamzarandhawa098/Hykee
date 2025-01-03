@@ -2,6 +2,7 @@
   <ConsultancyInfo
     :section1Title1="'Lo strumento di consulenza aumentata  <span class=\'text-primary-color\'><br />che stavi cercando</span>'"
     :section1Description1="section1Description1"
+    :section1DescriptionMob="section1DescriptionMob"
     :section1Button1="section1Button1"
     :section1Button2="section1Button2"
     :consultancyToolsImg="consultancyToolsImg"
@@ -12,6 +13,7 @@
     :section1Title2="'Abilita nuovi modelli di business grazie alla piattaforma Hykee di <span class=\'text-primary-color\'><br />consulenza aumentata</span>'"
     :section2Title="'Una piattaforma di <span class=\'text-primary-color\'> Business <br> Intelligence</span> pensata per l’era post covid'"
     :section2Description1="section2Description1"
+    :section2DescriptionMob="section2DescriptionMob" 
     :section3Title="'<span class=\'text-primary-color\'> Coinvolgi i tuoi clienti</span> e comunica in modo profilato ed efficace '"
     :section3Description1="section3Description1"
   />
@@ -45,6 +47,9 @@ const rightMobile = RightMobile;
 const section1Description1 = ref(
   "HYKEE mette a disposizione, in un’unica piattaforma, <span><br></span> le informazioni finanziarie, di business e di posizionamento di <span><br></span>brand dei tuoi clienti.<span><br><br></span> Valuta e supporta i tuoi clienti con una visione approfondita <span><br></span>del loro business per creare valore alla tua organizzazione e <span><br></span>alla loro."
 );
+const section1DescriptionMob = ref(
+  "HYKEE mette a disposizione, in un’unica piattaforma, le informazioni finanziarie, di business e di posizionamento di brand dei tuoi clienti.Valuta e supporta i tuoi clienti con una visione approfonditadel loro business per creare valore alla tua organizzazione e alla loro."
+);
 
 const section1Button1 = ref("Richiedi una prova gratuita");
 const section1Button2 = ref("Scopri di più");
@@ -52,10 +57,12 @@ const section1Button2 = ref("Scopri di più");
 const section2Description1 = ref(
   "L’analisi di bilancio è importante ma la capacità di un <span><br></span>business di competere sul mercato è frutto delle sue <span><br></span>persone, dei prodotti, dei modelli di business e della <span><br></span>capacità di adattamento. <span><br><br></span>Pensata per condurre analisi <span><br></span>approfondite coinvolgendo, in maniera amplificata dalla tecnologia e  <span><br></span>dalla consulenza, i tuoi clienti"
 );
+const section2DescriptionMob = ref(
+  "L’analisi di bilancio è importante ma la capacità di un business di competere sul mercato è frutto delle sue persone, dei prodotti, dei modelli di business e della capacità di adattamento. <span><br></span>Pensata per condurre analisi approfondite coinvolgendo, in maniera amplificata dalla tecnologia e  dalla consulenza, i tuoi clienti"
+);
 const section3Description1 = ref(
   "L’analisi di bilancio è importante ma la capacità di un business di competere sul mercato è frutto delle sue persone, dei prodotti, dei modelli di business e della capacità di adattamento.Pensata per condurre analisi approfondite coinvolgendo, in maniera amplificata dalla tecnologia e dalla consulenza, i tuoi clienti."
 );
-
 const plans = ref([
   {
     name: "Plus",
