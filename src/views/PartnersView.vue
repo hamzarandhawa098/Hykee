@@ -6,6 +6,7 @@
     :section1Button1="section1Button1"
     :section1Button2="section1Button2"
     :consultancyToolsImg="consultancyToolsImg"
+
   />
   <ConsultancyTools
     :leftMobile="leftMobile"
@@ -19,8 +20,8 @@
   />
   <Analyze
     :MoreInformationBg="MoreInformationBg"
-    :AnalyzeIcon="AnalyzeIcon"
-    :AnalyzeText="'Vuoi utilizzare Hykee per analisi evolute o per veicolare nuovi servizi ai tuoi clienti?'"
+    :AnalyzeImage="AnalyzeImage"
+    :AnalyzeText="'Vuoi utilizzare Hykee per analisi evolute <span><br></span>o per veicolare nuovi servizi ai tuoi clienti?'"
     :ButtonText="'Contactti'"
   />
   <Solutions
@@ -35,10 +36,11 @@ import ConsultancyToolsImg from "@/assets/images/ConsultancyTools.png";
 import LeftMobile from "@/assets/images/PartnersMobileRight.png";
 import RightMobile from "@/assets/images/RightMobile.png";
 import MoreInformationBg from "@/assets/images/MoreInformationBg.png";
-import AnalyzeIcon from "@/components/icons/AnalyzeIcon.vue";
 import Analyze from "@/components/ComeFunzionaView/Analyze.vue";
 import Solutions from "@/components/Partners/Solutions.vue";
 import ConsultancyInfo from "@/components/Partners/ConsultancyInfo.vue";
+import AnalyzeImage from "@/assets/images/AnalyzeImage.png";
+
 
 const consultancyToolsImg = ConsultancyToolsImg;
 const leftMobile = LeftMobile;
@@ -55,7 +57,7 @@ const section1Button1 = ref("Richiedi una prova gratuita");
 const section1Button2 = ref("Scopri di più");
 
 const section2Description1 = ref(
-  "L’analisi di bilancio è importante ma la capacità di un <span><br></span>business di competere sul mercato è frutto delle sue <span><br></span>persone, dei prodotti, dei modelli di business e della <span><br></span>capacità di adattamento. <span><br><br></span>Pensata per condurre analisi <span><br></span>approfondite coinvolgendo, in maniera amplificata dalla tecnologia e  <span><br></span>dalla consulenza, i tuoi clienti"
+  "L’analisi di bilancio è importante ma la capacità di un <span><br></span>business di competere sul mercato è frutto delle sue <span><br></span>persone, dei prodotti, dei modelli di business e della <span><br></span>capacità di adattamento. <span><br><br></span>Pensata per condurre analisi <span><br></span>approfondite coinvolgendo, in maniera amplificata dalla tecnologia e <span><br></span>dalla consulenza, i tuoi clienti"
 );
 const section2DescriptionMob = ref(
   "L’analisi di bilancio è importante ma la capacità di un business di competere sul mercato è frutto delle sue persone, dei prodotti, dei modelli di business e della capacità di adattamento. <span><br></span>Pensata per condurre analisi approfondite coinvolgendo, in maniera amplificata dalla tecnologia e  dalla consulenza, i tuoi clienti"
@@ -68,11 +70,7 @@ const plans = ref([
     name: "Plus",
     price: "29,00",
     features: [
-      "1-15 Utenti",
-      "Setup e formazione inclusa",
-      "10 HYKEE Score",
-      "10 Financial Rating / 10 Business Rating",
-      "Analisi Competitor",
+      "1-15 Utenti <span><br></span>Setup e formazione inclusa <span><br><br></span>10 HYKEE Score <span><br></span>10 Financial Rating / 10 Business Rating <span><br></span>Analisi Competitor",
     ],
     buttonText: "Attiva ora!",
   },
@@ -80,11 +78,7 @@ const plans = ref([
     name: "Unlimited",
     price: "100,00",
     features: [
-      "Più di 15 Utenti",
-      "Setup e formazione inclusa",
-      "HYKEE Score illimitati",
-      "Financial Rating / Business Rating",
-      "Analisi Competitor",
+      "Più di 15 Utenti <span><br></span>Setup e formazione inclusa <span><br><br></span>HYKEE Score illimitati <span><br></span>Financial Rating / Business Rating<span><br></span>Analisi Competitor",
     ],
     buttonText: "Attiva ora!",
   },

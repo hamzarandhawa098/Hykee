@@ -8,12 +8,12 @@
     :HeroBannerText="'The Augmented Advisory  <span class=\'text-primary-color\'>Platform to grow </span> your business '"
     :HeroBannerTextMobile="'La miglior App per <span class=\'text-primary-color\'>business valutation </span>'"
   />
-  <Intermediary
-    class="lg:hidden"
+  <Intermediary  
+    class="lg:hidden mt-[79px]"
     :IntermediaryBg="IntermediaryBg"
     :IntermediaryTitleText="'Sei un intermediario?'"
     :IntermediaryDescription="'Scopri le soluzioni HYKEE più adatte a te e ai tuoi clienti!'"
-    :IntermediaryButtonText="'Scopri Hykee'"
+    :IntermediaryButtonText="'Scopri Hykee per i Partner'"
   />
   <TechnologyConsultancy
     :LogoTransparent="LogoTransparent"
@@ -52,7 +52,7 @@
     :IntermediaryBg="IntermediaryBg"
     :IntermediaryTitleText="'Sei un intermediario?'"
     :IntermediaryDescription="'Scopri le soluzioni HYKEE più adatte a te e ai tuoi clienti!'"
-    :IntermediaryButtonText="'Scopri Hykee'"
+    :IntermediaryButtonText="'Scopri Hykee per i Partner'"
   />
 </template>
 
@@ -136,31 +136,31 @@ const steps = [
   {
     number: "01",
     description:
-      "Inserisci la tua ragione sociale o partita IVA per scoprire il tuo rating finanziario",
+      "Inserisci la tua ragione <span><br></span>sociale o partita IVA per <span><br></span>scoprire il tuo rating <span><br></span>finanziario",
     image: RightMobile,
   },
   {
     number: "02",
     description:
-      "Interagisci con il chatbot RBHQ per una valutazione delle dinamiche della tua azienda",
+      "Interagisci con il <span><br></span>chatbot RBHQ per una valutazione <span><br></span>delle dinamiche della tua <span><br></span>azienda",
     image: LeftMobile,
   },
   {
     number: "03",
     description:
-      "Inserisci il tuo sito internet per scoprire il tuo posizionamento di mercato",
+      "Inserisci il tuo sito internet <span><br></span>per scoprire il tuo <span><br></span>posizionamento di <span><br></span>mercato",
     image: RightMobile,
   },
   {
     number: "04",
     description:
-      "Interagisci con il chatbot RBHQ per una valutazione delle dinamiche della tua azienda",
+      "Ottieni news di mercato <span><br></span>profilate e connettiti <span><br></span>con i tuoi consulenti",
     image: LeftMobile,
   },
   {
     number: "05",
     description:
-      "Inserisci il tuo sito internet per scoprire il tuo posizionamento di mercato",
+      "Analizza il tuo Score <span><br></span>assieme ad un teamd i <span><br></span>consulenti per sbloccare <span><br></span>le tue opportunità di <span><br></span>crescita",
     image: RightMobile,
   },
 ];

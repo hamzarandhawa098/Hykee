@@ -38,16 +38,16 @@
       </p>
     </div>
   </section>
-  <section class="relative bg-footer-bg-color text-white pt-[95px]" v-else>
+  <section class="relative text-white pt-[95px]" v-else>
     <div class="max-w-6xl mx-auto w-full">
       <img
         :src="FooterBg"
         alt="Footer background"
-        class="absolute hidden lg:block inset-0 w-7/8 h-7/8 object-cover opacity-100 pointer-events-none"
+        class="absolute hidden lg:block inset-0 w-full h-full object-cover opacity-100 pointer-events-none z-1"
         style="object-position: center"
       />
-      <div class="flex flex-col lg:flex-row gap-16 ">
-        <div class="max-w-64 lg:mx-auto ml-14 lg:ml-0">
+      <div class="flex flex-col lg:flex-row gap-16">
+        <div class="max-w-64  ml-14 lg:ml-[18px] z-10">
           <component :is="Logo" />
           <p class="text-sm text-footer-links font-normal mt-8 font-monorope">
             {{ data.description }}
@@ -58,7 +58,7 @@
               :key="index"
               :to="link.href"
               :aria-label="link.ariaLabel"
-              class="rounded-full bg-gray-900 text-white px-2.5 py-1"
+              class="rounded-full text-white px-2.5 py-1"
             >
               <font-awesome-icon :icon="link.icon" />
             </router-link>
@@ -66,7 +66,7 @@
         </div>
 
         <div
-          class="ml-14 lg:ml-16 mx-auto grid grid-cols-1 md:grid-cols-4 gap-3 relative py-16"
+          class="ml-14 lg:ml-16 mx-auto grid grid-cols-1 md:grid-cols-4 gap-3 relative pt-12 pb-16"
         >
           <div>
             <h3

@@ -1,11 +1,11 @@
 <template>
   <div class="text-white max-w-[928px] pt-[100px] mx-auto">
-    <div class="container mx-auto px-6 lg:px-12">
+    <div class="container">
       <h2
         class="text-titleSecondary font-bold text-center lg:text-start font-sans w-full lg:w-1/3 mb-12"
         v-html="titleMobileSteps"
       ></h2>
-      <div class="space-y-6">
+      <div class="max-w-[866px] mx-auto">
         <div
           v-for="(step, index) in steps"
           :key="index"

@@ -19,14 +19,14 @@ export default {
         'card-button-active' : '#000D08',
         'faqIconCircular' : '#090C18',
         'faqQuestionBg' : '#151824',
-        'home-footer-bg' : '#010714'
+        'home-footer-bg' : '#010714',
+        'check-bg' : '#00F076',
       },
       fontFamily: {
-        monorope: ['Manrope', 'sans-serif'],
+        monorope: ['Manrope'],
         sans: ['DM Sans', 'sans-serif'],
         coolvetica: ['Coolvetica', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
-        avenir: ['Avenir', 'sans-serif'],
+        avenir: ['Avenir'],
         roboto: ['Roboto', 'sans-serif'],
 
       },

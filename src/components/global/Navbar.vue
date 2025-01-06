@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex justify-between items-end mx-[46.5px]  text-white lg:pt-[41px]">
+  <nav class="flex justify-between items-end lg:items-start mx-[46.5px]  text-white lg:pt-[41px]">
     <div
     >
       <router-link to="/">
@@ -26,7 +26,7 @@
       >
         {{ loginText }}
       </button>
-      <Button class="px-4 py-2">
+      <Button class="px-[25px] py-[10px]">
         {{ signupText }}
       </Button>
     </div>

@@ -1,6 +1,6 @@
 <template>
-    <section class="max-w-6xl mx-auto w-full  text-white py-12 px-6 lg:px-20">
-      <div class="flex flex-col lg:flex-row items-center justify-between space-y-6 md:space-y-0 lg:pt-[130px] lg:pb-[100px]">
+    <section class="max-w-6xl mx-auto w-full  text-white px-6 lg:px-20">
+      <div class="flex flex-col lg:flex-row items-center justify-between space-y-6 md:space-y-0 mt-[85px] lg:mt-[130px] lg:mb-[100px]">
         <div class="text-center">
           <h1 class="text-3xl md:text-5xl font-sans text-center leading-[50px] font-bold" v-html="ChooseSolutionTitle">
           </h1>

@@ -1,5 +1,5 @@
 <template>
-  <div class=" w-full max-w-[340px] lg:max-w-[998.48px] mx-auto mt-[50px] lg:mt-[100px] mb-[100px]">
+  <div class=" w-full max-w-[340px] lg:max-w-[998.48px] mx-auto mt-[50px] lg:mt-[100px] pb-[100px]">
     <div
       class="text-white flex flex-col items-center lg:items-start max-w-[898.48px] mx-auto text-start lg:text-center"
     >
@@ -22,7 +22,7 @@
         </div>
       </div>
       <div
-        class="flex flex-col lg:flex-row mt-[15px] lg:justify-start lg:items-end gap-[35px] lg:gap-[70px]"
+        class="flex flex-col lg:flex-row lg:mt-[15px] lg:justify-start lg:items-end gap-[35px] lg:gap-[70px]"
       >
         <div>
           <component

@@ -56,7 +56,6 @@ const cards = ref([
       "Prospetti contabili degli ultimi due anni per te e per 120 aziende di tuo interessea",
       "Business Rating con questionario SA",
 
-
     ],
     buttonText: "Attiva ora!",
   },

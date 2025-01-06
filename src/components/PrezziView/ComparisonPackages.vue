@@ -1,6 +1,6 @@
 <template>
     <div class="relative max-w-4xl mx-auto w-full text-white pt-[100px]">
-      <div v-if="!isTableOpen" class="relative w-full rounded-lg overflow-hidden">
+      <div v-if="!isTableOpen" class="relative w-full rounded-xl overflow-hidden">
         <img
           :src="ComparisonBg"
           alt="Background"
@@ -8,20 +8,20 @@
         />
         <Button
           @click="toggleTable"
-          class="absolute py-2 px-6"
+          class="absolute py-[12px] px-[49px]"
           style="top: 50%; left: 50%; transform: translate(-50%, -50%)"
         >
           {{ buttonTextHide }}
         </Button>
       </div>
   
-      <div v-else class="flex justify-center items-center rounded-lg p-4">
-        <Button @click="toggleTable" class="py-2 px-6">
+      <div v-else class="flex justify-center items-center rounded-xl p-4">
+        <button @click="toggleTable" class=" py-[12px] px-[49px] rounded-xl border border-primary-color">
           {{ buttonTextShow }}
-        </Button>
+        </button>
       </div>
   
-      <div v-if="isTableOpen" class="mt-6 rounded-lg shadow-lg overflow-hidden transition-all duration-500 ease-in-out">
+      <div v-if="isTableOpen" class="mt-6 rounded-xl shadow-lg overflow-hidden transition-all duration-500 ease-in-out">
         <table class="w-full text-left border-collapse">
           <thead class="bg-white text-card-button-active">
             <tr>
@@ -35,14 +35,14 @@
               <td class="py-4 px-6 border-b border-b-gray-300 border-r-2 border-r-primary-color">
                 {{ row.name }}
               </td>
-              <td class="py-4 px-6 border-b border-b-gray-300 border-r-2 border-r-primary-color text-start">
-                <span v-if="row.start" class="text-green-600 font-bold">✔</span>
+              <td class="py-5 px-6 border-b border-b-gray-300 border-r-2 border-r-primary-color text-start">
+                <span v-if="row.start" class="text-green-600 font-bold"><ComparisonPackageCheck /></span>
               </td>
-              <td class="py-4 px-6 border-b border-b-gray-300 border-r-2 border-r-primary-color text-start">
-                <span v-if="row.plus" class="text-green-600 font-bold">✔</span>
+              <td class="py-5 px-6 border-b border-b-gray-300 border-r-2 border-r-primary-color text-start">
+                <span v-if="row.plus" class="text-green-600 font-bold"><ComparisonPackageCheck /></span>
               </td>
-              <td class="py-4 px-6 border-b border-gray-300 text-start">
-                <span v-if="row.easy" class="text-green-600 font-bold">✔</span>
+              <td class="py-5 px-6 border-b border-gray-300 text-start">
+                <span v-if="row.easy" class="text-green-600 font-bold"><ComparisonPackageCheck /></span>
               </td>
             </tr>
           </tbody>
@@ -55,17 +55,17 @@
           </thead>
           <tbody class="bg-gray-50 text-card-button-active">
             <tr v-for="(row, index) in tableData2" :key="index">
-              <td class="py-4 px-6 border-b border-b-gray-300 border-r-2 border-r-primary-color">
+              <td class="py-5 px-6 border-b border-b-gray-300 border-r-2 border-r-primary-color">
                 {{ row.name }}
               </td>
-              <td class="py-4 px-6 border-b border-b-gray-300 border-r-2 border-r-primary-color text-start">
-                <span v-if="row.start" class="text-green-600 font-bold">✔</span>
+              <td class="py-5 px-6 border-b border-b-gray-300 border-r-2 border-r-primary-color text-start">
+                <span v-if="row.start" class="text-green-600 font-bold"><ComparisonPackageCheck /></span>
               </td>
-              <td class="py-4 px-6 border-b border-b-gray-300 border-r-2 border-r-primary-color text-start">
-                <span v-if="row.plus" class="text-green-600 font-bold">✔</span>
+              <td class="py-5 px-6 border-b border-b-gray-300 border-r-2 border-r-primary-color text-start">
+                <span v-if="row.plus" class="text-green-600 font-bold"><ComparisonPackageCheck /></span>
               </td>
-              <td class="py-4 px-6 border-b border-gray-300 text-start">
-                <span v-if="row.easy" class="text-green-600 font-bold">✔</span>
+              <td class="py-5 px-6 border-b border-gray-300 text-start">
+                <span v-if="row.easy" class="text-green-600 font-bold"><ComparisonPackageCheck /></span>
               </td>
             </tr>
           </tbody>
@@ -78,6 +78,7 @@
   import { ref } from "vue";
   import ComparisonBg from "@/assets/images/ComparisonPackages.png";
   import Button from "@/components/global/Button.vue";
+  import ComparisonPackageCheck from "../icons/ComparisonPackageCheck.vue";
   
   const isTableOpen = ref(false);
   

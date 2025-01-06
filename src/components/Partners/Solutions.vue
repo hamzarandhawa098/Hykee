@@ -13,23 +13,22 @@
         <div
           v-for="plan in plans"
           :key="plan.name"
-          class="bg-white text-faqQuestionBg rounded-2xl p-6 w-[296px] h-[367px] cursor-pointer"
+          class="bg-white text-faqQuestionBg rounded-2xl px-8 py-8 w-[296px] h-[367px] cursor-pointer"
           :class="{ 'ring-4 ring-primary-color': selectedPlan === plan.name }"
           @click="selectPlan(plan.name)"
         >
           <h2 class="text-xl text-left font-bold mb-4">{{ plan.name }}</h2>
           <div class="flex">
             <p class="text-4xl font-bold text-faqQuestionBg mb-4">€{{ plan.price }}</p>
-            <span class="text-xs text-left mt-3 pl-[10px] font-normal text-solution-features"
+            <span class="text-xs text-left mt-1 pl-[10px] font-normal text-solution-features"
               >per utente <br> al mese</span
             >
           </div>
-          <ul class="text-sm text-left text-solution-features space-y-2 mb-6">
-            <li v-for="feature in plan.features" :key="feature">
-              {{ feature }}
+          <ul class="text-xs text-left text-solution-features mt-[20px] mb-[31px]">
+            <li v-for="feature in plan.features" :key="feature" v-html="feature">
             </li>
           </ul>
-          <Button class="py-2 px-4">
+          <Button class="py-[12px] px-[75.5px]">
             {{ plan.buttonText }}
           </Button>
         </div>

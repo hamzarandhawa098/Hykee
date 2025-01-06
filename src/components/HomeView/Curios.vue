@@ -20,7 +20,7 @@
           {{ curiosDescription }}
         </h2>
         <Button
-          class="w-[227px] h-[44px]"
+          class="px-[18px] py-[12px]"
         >
           {{ curiosButtonText }}
         </Button>

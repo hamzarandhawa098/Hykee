@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faCaretDown, faCheck, faChevronDown, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook,  faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
-library.add(faCheck, faFacebook, faTwitter, faLinkedin, faPlus, faMinus, faChevronDown, faCaretDown)
+library.add(faCheck, faFacebook, faTwitter, faLinkedin, faChevronDown, faCaretDown, faMinus, faPlus)
 const app = createApp(App)
 
 app.use(router)

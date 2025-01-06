@@ -1,16 +1,16 @@
 <template>
-  <div class="py-32">
+  <div class="my-[106px]">
     <div
-      class="bg-primary-color text-white px-3 lg:px-24 max-w-4xl mx-auto w-full rounded-2xl h-auto"
+      class="bg-primary-color text-white px-3 lg:px-24 max-w-[899px] mx-auto w-full rounded-2xl h-auto"
     >
-      <div class="max-w-4xl mx-auto">
+      <div class="max-w-[655px] mx-auto">
         <div
           class="flex flex-col lg:flex-row text-center lg:text-left justify-center items-start lg:justify-between mb-10 pt-[60px]"
         >
-          <h1 class="text-3xl lg:text-5xl font-sans font-bold lg:max-w-sm">
+          <h1 class="text-3xl lg:text-5xl font-sans font-bold lg:max-w-[278px]">
             {{ title }}
           </h1>
-          <p class="text-xl font-bold font-sans lg:max-w-sm">
+          <p class="text-[20px] font-bold leading-[26px] font-sans lg:max-w-[279px]">
             {{ description }} <br /><br />
             <span class="text-sm font-normal">
               {{ note }}
@@ -49,10 +49,10 @@
                 <li
                   v-for="feature in plan.features"
                   :key="feature"
-                  class="flex items-start"
+                  class="flex items-normal"
                 >
                   <span
-                    class="text-white px-1.5 py-0.5 rounded-full bg-primary-color font-bold mr-2"
+                    class="text-white w-[20px] h-[20px] p-1 flex justify-center items-center   rounded-full bg-check-bg font-bold mr-2"
                   >
                     <font-awesome-icon :icon="['fa', 'check']" />
                   </span>
@@ -64,7 +64,7 @@
               </ul>
               <div class="flex justify-center">
                 <button
-                  class="bg-primary-color text-white w-[232px] h-[44px] rounded-xl font-semibold absolute bottom-6"
+                  class="bg-primary-color text-white px-[75.5px] py-[12px] rounded-xl font-semibold absolute bottom-6"
                 >
                   {{ plan.buttonText }}
                 </button>

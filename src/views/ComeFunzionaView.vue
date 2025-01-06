@@ -1,7 +1,7 @@
 <template>
   <Analyze
     :MoreInformationBg="MoreInformationBg"
-    :AnalyzeIcon="AnalyzeIcon"
+    :AnalyzeImage="AnalyzeImage"
     :AnalyzeText="AnalyzeText"
   />
   <MobileSteps
@@ -32,17 +32,17 @@ import { ref } from "vue";
 import Analyze from "@/components/ComeFunzionaView/Analyze.vue";
 import MobileStepsComeFunziona from "@/components/ComeFunzionaView/MobileStepsComeFunziona.vue";
 import MoreInformationBg from "@/assets/images/MoreInformationBg.png";
-import AnalyzeIcon from "@/components/icons/AnalyzeIcon.vue";
 import LeftMobile from "@/assets/images/LeftMobile.png";
 import RightMobile from "@/assets/images/RightMobileCome.png";
 import StartGrowing from "@/components/HomeView/StartGrowing.vue";
 import StartGrowingFunziona from "@/assets/images/StartGrowingFunziona.png";
+import AnalyzeImage from "@/assets/images/AnalyzeImage.png";
 
 import MobileSteps from "@/components/HomeView/MobileSteps.vue";
 
 const AnalyzeText = ref(`
   <div>Analizza il tuo business</div>
-  <div class="lg:ml-4 mb-3 mt-3">Osserva il mercato</div>
+  <div class="lg:ml-4">Osserva il mercato</div>
   <div class="lg:ml-8  ">Ottimizza la strategia di crescita!</div>
 `);
 const steps = [
@@ -54,7 +54,7 @@ const steps = [
   {
     number: "02",
     description:
-      "Valuta i tuoi clienti con una visione a 360° (finanziaria e business). Facilmente integrabile con i tuoi servizi di consulenza.",
+      "Valuta e aiuta i tuoi clienti con una visione a 360 gradi ( finanziaria e business ) Facilmente integrabile con i tuoi servizi di consulenza Abilitatore di un modello di business innovativo che amplifica la tua proposta di valore grazie alla tecnologia Hykee Invia notizie profilate ai tuoi clienti ",
     image: LeftMobile,
   },
   {

@@ -1,5 +1,5 @@
   <template>
-  <div class="text-white space-y-20 max-w-[340px] mb-[150px] lg:max-w-4xl mx-auto">
+  <div class="text-white space-y-20  max-w-[340px] mb-[150px] lg:max-w-4xl mx-auto">
     <h2 class="text-titleSecondary font-bold text-center lg:text-start font-sans w-full lg:w-1/3 mb-12" v-html="titleMobileSteps"></h2>
     <div
       v-for="(step, index) in steps"
@@ -9,7 +9,7 @@
         index % 2 === 1 ? 'flex-row-reverse' : 'flex-row',
       ]"
     >
-      <div class="flex flex-col items-start py-7">
+      <div class="flex flex-col items-start py-7 max-w-[174px]">
         <div
           :class="[
             'flex items-center gap-5',
@@ -20,14 +20,13 @@
           <hr class="w-10 border-2 border-primary-color" />
         </div>
         <br />
-        <p class="text-[13px] max-w-[174px] lg:max-w-[340px] lg:text-sm font-normal font-monorope leading-[23px]">
-          {{ step.description }}
+        <p class="text-[13px] lg:text-sm font-normal font-monorope leading-[23px]" v-html="step.description">
         </p>
       </div>
       <img
         :src="step.image"
         :alt="`Step ${step.number} Preview`"
-        class="w-3/4 lg:w-44 rounded-lg shadow-lg"
+        class="w-[160px] auto lg:w-44 rounded-lg shadow-lg"
       />
     </div>
   </div>
