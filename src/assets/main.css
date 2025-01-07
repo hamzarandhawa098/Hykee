@@ -9,3 +9,13 @@
   -webkit-text-stroke: 1px #00cd78;
 }
 
+.svg-active svg path{
+  stroke: #2FE5A7 !important;
+  opacity: 100%;
+}
+.svg-bottom-active svg path{
+
+  fill: #2FE5A7 !important;
+  fill-opacity: 100%;
+
+}

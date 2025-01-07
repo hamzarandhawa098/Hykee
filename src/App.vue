@@ -1,9 +1,4 @@
 <template>
-
-  <DefaultLayout>
-    <router-view />
-  </DefaultLayout>
+  <router-view />
 </template>
-<script setup>
-import DefaultLayout from '@/Layout/DefaultLayout.vue';
-</script>
+<script setup></script>

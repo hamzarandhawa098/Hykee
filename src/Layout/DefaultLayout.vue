@@ -82,6 +82,7 @@ const menuItems = ref([
   { text: "Partner", href: "/partners" },
 ]);
 
+
 //Footer
 
 const footerSections = ref([

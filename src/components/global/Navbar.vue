@@ -1,7 +1,8 @@
 <template>
-  <nav class="flex justify-between items-end lg:items-start mx-[46.5px]  text-white lg:pt-[41px]">
-    <div
-    >
+  <nav
+    class="flex justify-between items-end lg:items-start mx-[46.5px] text-white lg:pt-[41px]"
+  >
+    <div>
       <router-link to="/">
         <component :is="Logo" />
       </router-link>
@@ -18,25 +19,24 @@
       </li>
     </ul>
 
-    <div
-      class="hidden lg:flex items-center space-x-3.5 cursor-pointer"
-    >
-      <button
+    <div class="hidden lg:flex items-center space-x-3.5 cursor-pointer">
+      <router-link
+        to="/login"
         class="text-white font-monorope font-extrabold text-sm hover:text-primary-color"
       >
         {{ loginText }}
-      </button>
+      </router-link>
       <Button class="px-[25px] py-[10px]">
         {{ signupText }}
       </Button>
     </div>
-      <div
-        class="lg:hidden mt-4 flex justify-center items-center border rounded-full border-primary-color border-6 p-2"
-      >
-        <button @click="toggleMenu" class="text-white">
-          <component :is="Hamburger" />
-        </button>
-      </div>
+    <div
+      class="lg:hidden mt-4 flex justify-center items-center border rounded-full border-primary-color border-6 p-2"
+    >
+      <button @click="toggleMenu" class="text-white">
+        <component :is="Hamburger" />
+      </button>
+    </div>
 
     <div
       v-if="isMenuOpen"
@@ -55,9 +55,12 @@
         </li>
       </ul>
       <div class="mt-4">
-        <button class="w-full text-white hover:text-primary-color">
+        <router-link
+          to="/login"
+          class="w-full block text-white hover:text-primary-color"
+        >
           {{ loginText }}
-        </button>
+        </router-link>
         <Button class="w-full mt-2 px-4 py-2">
           {{ signupText }}
         </Button>
