@@ -65,7 +65,7 @@
           <div>
             <Button
               type="submit"
-              class="w-full py-[14px] px-[153px]"
+              class="w-full py-[14px] px-[153px] text-black"
               :disabled="!isFormValid"
             >
               Login
@@ -114,8 +114,27 @@ const isFormValid = computed(() => !emailError.value && !passwordError.value);
 const handleLogin = async () => {
   formError.value = ""; 
 
-  if (!isFormValid.value) {
-    formError.value = "Please fill in all fields correctly.";
+  if (!email.value) {
+    formError.value = "Email cannot be empty.";
+    return;
+  }
+  if (emailError.value) {
+    formError.value = emailError.value;
+    return;
+  }
+
+  if (!password.value) {
+    formError.value = "Password cannot be empty.";
+    return;
+  }
+  if (passwordError.value) {
+    formError.value = passwordError.value;
+    return;
+  }
+
+  const emailExists = await authStore.checkEmail(email.value);
+  if (!emailExists) {
+    formError.value = "Invalid email address.";
     return;
   }
 
@@ -127,7 +146,7 @@ const handleLogin = async () => {
   if (isAuthenticated) {
     router.push("/dashboard");
   } else {
-    formError.value = "Invalid email or password.";
+    formError.value = "Invalid password.";
   }
 };
 </script>
@@ -136,4 +155,5 @@ const handleLogin = async () => {
 body {
   margin: 0;
 }
+
 </style>

@@ -19,3 +19,6 @@
   fill-opacity: 100%;
 
 }
+input {
+  outline: none !important;
+}
