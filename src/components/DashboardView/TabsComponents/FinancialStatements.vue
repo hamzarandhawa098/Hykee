@@ -4,12 +4,12 @@
       <div class="flex justify-center xl:justify-between items-center">
         <div class="xl:space-x-4 flex flex-col xl:flex-row">
           <button
-            class="px-[27px] py-[11px]  bg-Tabs-button border-2 border-primary-color rounded-[10px] text-sm font-medium text-white"
+            class="px-[27px] py-[11px]  bg-Tabs-button border-2 border-primary-color rounded-[10px] text-[13px] font-semibold leading-5 text-white"
           >
             Riclassificato
           </button>
           <button
-            class="px-[40.5px] mt-4 py-[11px]  rounded-[10px] text-sm font-medium text-white opacity-[50%] bg-Tabs-button"
+            class="px-[40.5px] mt-4 py-[11px]  rounded-[10px] text-[13px] font-semibold leading-5 text-white opacity-[50%] bg-Tabs-button"
           >
             IV Diretta
           </button>
@@ -21,6 +21,7 @@
           <div></div>
           <button
             class="px-[28px] py-[13px] gap-[19px] flex rounded-t-lg bg-primary-color"
+            @click="downloadTableAsCSV"
           >
             <DownloadIcon />
             Scarica altri Bilanci
@@ -71,6 +72,24 @@ const rows = ref([
   { id: 4, name: "Income <span><br></span>Statement", values: [2018, 2019, 2020] },
   { id: 4, name: "Income <span><br></span>Statement", values: [2018, 2019, 2020] },
 ]);
+
+const downloadTableAsCSV = () => {
+  let csvContent = `${tableTitle},${years.value.join(",")}\n`;
+
+  rows.value.forEach((row) => {
+    const rowData = [row.name, ...row.values].join(",");
+    csvContent += `${rowData}\n`;
+  });
+
+  const blob = new Blob([csvContent], { type: "text/csv" });
+
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = "financial_statements.csv";
+  link.click();
+
+  URL.revokeObjectURL(link.href);
+};
 </script>
 
 <style scoped></style>

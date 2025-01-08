@@ -24,18 +24,14 @@
       </div>
     </div>
 
-    <div class="bg-Sidebar-bg max-w-[732px] w-full rounded-[10px]">
+    <div class="bg-Sidebar-bg max-w-[732px] h-[304px] w-full rounded-[10px]">
       <div class="mt-[25px] px-[39.5px]">
         <h5 class="font-sans font-medium text-lg opacity-[70%] text-whites">
           {{ hykeeTitle }}
         </h5>
       </div>
-      <div class="flex-1 flex justify-center mt-[40px]">
-        <img
-          :src="hykeeImage"
-          alt="Hykee Score Gauge"
-          class="w-[450px] h-[212px]  object-contain"
-        />
+      <div class="flex-1 flex justify-center">
+        <SpeedoMeter class="absolute bottom-3"/>
       </div>
     </div>
   </section>
@@ -55,12 +51,8 @@
             {{ hykeeTitle }}
           </h5>
         </div>
-        <div class="flex justify-center mt-[20.86px]">
-          <img
-            :src="hykeeImage"
-            alt="Hykee Score Gauge"
-            class="w-[250px] h-[126px] object-contain"
-          />
+        <div class="flex justify-center ">
+          <SpeedoMeter />
         </div>
       </div>
     </div>
@@ -93,6 +85,7 @@
 import { ref } from "vue";
 import MobileCompoBg from "@/assets/images/MobileCompoBg.png";
 import ScoreBg from "@/assets/images/ScoreBg.png";
+import SpeedoMeter from "@/components/global/SpeedoMeter.vue";
 defineProps({
   scores: Array,
   hykeeTitle: String,

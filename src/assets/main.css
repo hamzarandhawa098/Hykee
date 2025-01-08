@@ -22,3 +22,8 @@
 input {
   outline: none !important;
 }
+
+.current-value{
+  display: none !important;
+}
+
