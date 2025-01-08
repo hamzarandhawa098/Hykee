@@ -65,7 +65,7 @@
           <div>
             <Button
               type="submit"
-              class="w-full py-[14px] px-[153px] text-black"
+              class="w-full py-[14px] px-[135px] xl:px-[153px] text-black flex"
               :disabled="!isFormValid"
             >
               Login
