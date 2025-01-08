@@ -33,7 +33,8 @@ export default {
         "BottomNavBg" : "#272727",
         "Searchbg" : "#464646",
         "SearchTableBg" : "#2B2B2B",
-        "SearchTableDivider" : "#515151"
+        "SearchTableDivider" : "#515151",
+        "TableEvenRow" : "#343434"
       },
       fontFamily: {
         monorope: ["Manrope"],

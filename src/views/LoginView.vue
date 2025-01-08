@@ -37,7 +37,7 @@
                 id="email"
                 type="email"
                 v-model="email"
-                placeholder="Enter your email"
+                placeholder="Inserisci la tua mail"
                 class="block px-5 w-full h-[53px]  xl:w-[349px] bg-card-button-active text-white border border-primary-color rounded-[5px]"
               />
               <p v-if="emailError" class="text-red-500 text-xs mt-1">
@@ -54,7 +54,7 @@
                 id="password"
                 type="password"
                 v-model="password"
-                placeholder="Enter your password"
+                placeholder="Inserisci la tua mail"
                 class="block px-5 h-[53px] w-full xl:w-[349px] bg-card-button-active text-white border border-primary-color rounded-[5px]"
               />
               <p v-if="passwordError" class="text-red-500 text-xs mt-1">
@@ -96,14 +96,14 @@ const password = ref("");
 const formError = ref("");
 
 const emailError = computed(() => {
-  if (!email.value) return "Email is required.";
+  if (!email.value) return "";
   if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email.value))
     return "Enter a valid email address.";
   return null;
 });
 
 const passwordError = computed(() => {
-  if (!password.value) return "Password is required.";
+  if (!password.value) return "";
   if (password.value.length < 6)
     return "Password must be at least 6 characters.";
   return null;

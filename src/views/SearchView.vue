@@ -88,6 +88,156 @@
         </div>
       </div>
     </div>
+
+    <div class="mt-[31px]">
+      <h2 class="font-poppins font-normal text-sm">345 companies</h2>
+
+      <div
+        class="bg-SearchTableBg mt-4 max-w-[343px] w-full h-auto text-white rounded-[10px]"
+      >
+        <div class="font-poppins font-normal px-[11px] pt-[14px] text-sm mb-2">
+          Top 3
+        </div>
+        <table
+          class="w-full text-left text-sm font-poppins divide-y divide-SearchTableDivider"
+        >
+          <thead>
+            <tr>
+              <th class=""></th>
+              <th></th>
+              <th class="text-center"></th>
+              <th class="text-center"></th>
+              <th class="text-center"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              v-for="(item, index) in companies"
+              :key="index"
+              :class="{
+                'bg-SearchTableBg': index % 2 === 0,
+                'bg-TableEvenRow': index % 2 !== 0,
+              }"
+            >
+              <td class="py-2 font-poppins font-normal pl-[10px] text-[12px]">
+                <span>{{ index + 1 }}.</span>
+                <span class="">{{ item.name }}</span>
+              </td>
+              <td>{{ item.location }}</td>
+              <td class="text-center">
+                <div class="flex">
+                  <span
+                    class="bg-primary-color mt-[2px] font-poppins font-medium text-[10px] flex justify-center items-center mx-auto h-4 w-4 text-white rounded-full text-xs"
+                  >
+                    R
+                  </span>
+                  <span class="font-poppins font-normal text-[12px]">{{
+                    item.revenue
+                  }}</span>
+                </div>
+              </td>
+              <td class="text-center">
+                <div class="flex">
+                  <span
+                    class="bg-primary-color mt-[2px] flex justify-center items-center mx-auto h-4 w-4 text-white rounded-full text-xs"
+                  >
+                    E
+                  </span>
+                  <span class="font-poppins font-normal text-[12px]">{{
+                    item.employees
+                  }}</span>
+                </div>
+              </td>
+              <td class="text-center pr-[11px]">
+                <div class="flex">
+                  <span
+                    class="bg-primary-color mt-[2px] flex justify-center items-center mx-auto h-4 w-4 text-white rounded-full text-xs"
+                  >
+                    P
+                  </span>
+                  <span class="font-poppins font-normal text-[12px]">{{
+                    item.profit
+                  }}</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div
+        class="bg-SearchTableBg mt-4 max-w-[343px] w-full h-auto text-white rounded-[10px]"
+      >
+        <div class="font-poppins font-normal px-[11px] pt-[14px] text-sm mb-2">
+          Top 3
+        </div>
+        <table
+          class="w-full text-left text-sm font-poppins divide-y divide-SearchTableDivider"
+        >
+          <thead>
+            <tr>
+              <th class=""></th>
+              <th></th>
+              <th class="text-center"></th>
+              <th class="text-center"></th>
+              <th class="text-center"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              v-for="(item, index) in companies"
+              :key="index"
+              :class="{
+                'bg-SearchTableBg': index % 2 === 0,
+                'bg-TableEvenRow': index % 2 !== 0,
+              }"
+            >
+              <td class="py-2 font-poppins font-normal pl-[10px] text-[12px]">
+                <span>{{ index + 1 }}.</span>
+                <span class="">{{ item.name }}</span>
+              </td>
+              <td>{{ item.location }}</td>
+              <td class="text-center">
+                <div class="flex">
+                  <span
+                    class="bg-primary-color mt-[2px] font-poppins font-medium text-[10px] flex justify-center items-center mx-auto h-4 w-4 text-white rounded-full text-xs"
+                  >
+                    R
+                  </span>
+                  <span class="font-poppins font-normal text-[12px]">{{
+                    item.revenue
+                  }}</span>
+                </div>
+              </td>
+              <td class="text-center">
+                <div class="flex">
+                  <span
+                    class="bg-primary-color mt-[2px] flex justify-center items-center mx-auto h-4 w-4 text-white rounded-full text-xs"
+                  >
+                    E
+                  </span>
+                  <span class="font-poppins font-normal text-[12px]">{{
+                    item.employees
+                  }}</span>
+                </div>
+              </td>
+              <td class="text-center pr-[11px]">
+                <div class="flex">
+                  <span
+                    class="bg-primary-color mt-[2px] flex justify-center items-center mx-auto h-4 w-4 text-white rounded-full text-xs"
+                  >
+                    P
+                  </span>
+                  <span class="font-poppins font-normal text-[12px]">{{
+                    item.profit
+                  }}</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -95,4 +245,27 @@
 import TopBarDashboard from "@/components/DashboardView/TopBarDashboard.vue";
 import LogoLarge from "@/components/icons/LogoLarge.vue";
 import CrossIcon from "@/components/icons/CrossIcon.vue";
+const companies = [
+  {
+    name: "Ferrero S.P.A",
+    location: "BO",
+    revenue: "12.988",
+    employees: "45.000",
+    profit: "75.000",
+  },
+  {
+    name: "Agrifood Srl",
+    location: "BO",
+    revenue: "12.988",
+    employees: "45.000",
+    profit: "75.000",
+  },
+  {
+    name: "Firen Srl",
+    location: "RE",
+    revenue: "12.988",
+    employees: "45.000",
+    profit: "75.000",
+  },
+];
 </script>

@@ -11,7 +11,7 @@
         <div
           class="flex items-center justify-center w-[60px] h-[60px] bg-primary-color rounded-full"
         >
-          <component :is="score.icon" />
+      <component :is="score.icon" />
         </div>
         <div>
           <p class="text-2xl font-poppins leading-9 font-bold">
@@ -66,7 +66,7 @@
     </div>
     <div class="flex gap-[15px] text-white mt-[16px]">
       <div
-        v-for="(score, index) in scores"
+        v-for="(score, index) in scoresMobile"
         :key="index"
         class="rounded-lg w-full mx-auto "
         :style="{
@@ -99,7 +99,7 @@ defineProps({
   hykeeImage: String,
 });
 
-const scores = ref([
+const scoresMobile = ref([
   {
     title: 'Business Score',
     value: '74%',
