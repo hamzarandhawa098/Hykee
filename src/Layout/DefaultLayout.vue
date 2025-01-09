@@ -30,6 +30,8 @@
       :footerSections="footerSections"
       :footerMeta="footerMeta"
       :data="data"
+      :route="isHomePage"
+      :FooterBg="FooterBg"
     />
     <ContattiPopup v-if="showPopup" @close="closePopup" />
   </div>
@@ -50,8 +52,11 @@ import MoreInformationBg from "@/assets/images/MoreInformationBg.png";
 import ContactFormBg from "@/assets/images/ContactForm.png";
 import EnvelopeIcon from "@/components/icons/EnvelopeIcon.vue";
 import ContattiPopup from "@/components/global/ContattiPopup.vue";
+import FooterBg from "@/assets/images/footerBg.png";
+
 
 const route = useRoute();
+
 
 const isHomePage = computed(() => route.path === "/");
 const showPopup = ref(false);

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-[204px] fixed bg-Sidebar-bg text-Sidebar-links h-screen flex flex-coloverflow-auto"
+    class="w-[204px] fixed bg-Sidebar-bg text-Sidebar-links h-screen flex flex-col overflow-auto"
   >
     <div class="flex items-center justify-center mt-[45px]">
       <Logo />

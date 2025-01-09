@@ -17,7 +17,7 @@
     </div>
 
     <div
-      v-if="!isSearchPage"
+      v-if="props.route"
       class="xl:flex items-center hidden bg-Sidebar-bg text-white rounded-[10px] border w-[784px] h-[53px] px-5"
     >
       <input
@@ -50,19 +50,15 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
-import { useRoute } from "vue-router";
 import StarIconMobile from "@/components/icons/StarIconMobile.vue";
 
-const route = useRoute();
 
-const isSearchPage = computed(() => route.path === "/search");
-
-defineProps({
+const props = defineProps({
   TopBarTitle: String,
   ButtonLogoText: String,
   ProfileName: String,
   ProfileAccount: String,
+  route: String,
 });
 </script>
 
