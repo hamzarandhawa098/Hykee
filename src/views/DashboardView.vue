@@ -5,6 +5,7 @@
       :ButtonLogoText="'RG'"
       :ProfileName="'Robert Gray'"
       :ProfileAccount="'Hykee Account'"
+      :route="!isSearchPage"
     />
     <CompanyInfo
       :companyInfoTitle="companyInfoTitle"
@@ -14,8 +15,9 @@
       :scores="scores"
       :hykeeTitle="hykeeTitle"
       :hykeeImage="hykeeImage"
+
     />
-    <Tabs/>
+    <Tabs />
   </div>
 </template>
 <script setup>
@@ -27,7 +29,12 @@ import GuageDashboard from "@/assets/images/GuageDashboard.png";
 import BusinessScore from "@/components/icons/BusinessScore.vue";
 import FinancialScore from "@/components/icons/FinancialScore.vue";
 import Tabs from "@/components/DashboardView/Tabs.vue";
+import { computed } from "vue";
+import { useRoute } from "vue-router";
 
+const route = useRoute();
+
+const isSearchPage = computed(() => route.path === "/search");
 const companyInfoTitle = ref("Info dell’azienda");
 const companyInfo = ref({
   Indirizzo: "Via Mazzini 3 - Torino - Piemonte",

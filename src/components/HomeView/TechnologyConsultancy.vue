@@ -3,7 +3,7 @@
     <div
       class="text-white flex flex-col items-center lg:items-start max-w-[898.48px] mx-auto text-start lg:text-center"
     >
-      <div v-if="isHomePage">
+      <div v-if="props.route">
         <div
           class="text-4xl lg:text-title max-w-[823px] hidden lg:block font-sans font-bold lg:leading-[66px]"
           v-html="TechText"
@@ -41,16 +41,14 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
-import { useRoute } from "vue-router";
-const route = useRoute();
-const isHomePage = computed(() => route.path === "/");
 
-defineProps({
+
+const props = defineProps({
   LogoTransparent: String,
   TechText: String,
   TechDescription: String,
   TitleTextMobile: String,
+  route: String,
 });
 </script>
 

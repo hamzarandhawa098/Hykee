@@ -1,5 +1,5 @@
 <template>
-  <section class="text-white py-12 bg-home-footer-bg" v-if="isHomePage">
+  <section class="text-white py-12 bg-home-footer-bg" v-if="props.route">
     <div class="flex flex-col-reverse lg:flex-col justify-center items-center">
       <div
         class="max-w-[933px]  mx-auto w-full flex flex-wrap lg:space-y-0 md:justify-between px-10 lg:px-0 text-left"
@@ -157,18 +157,14 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
-import { useRoute } from "vue-router";
-const route = useRoute();
-const isHomePage = computed(() => route.path === "/");
-import FooterBg from "@/assets/images/footerBg.png";
-import Logo from "../icons/Logo.vue";
 
-defineProps({
+const props = defineProps({
   Logo: String,
   footerSections: Array,
   footerMeta: String,
   data: String,
+  route: String,
+  FooterBg : String,
 });
 </script>
 <style scoped></style>

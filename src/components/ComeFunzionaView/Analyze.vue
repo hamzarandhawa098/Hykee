@@ -1,5 +1,5 @@
 <template>
-  <section class="relative w-full my-[64px] flex items-center justify-center" v-if="isComeFuzionaView">
+  <section class="relative w-full my-[64px] flex items-center justify-center" v-if="props.route">
     <div
       class="relative mx-auto z-10 flex py-12 items-center justify-center lg:justify-between w-full  max-w-[938px] text-white rounded-lg"
     >
@@ -47,20 +47,14 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
 import Button from "@/components/global/Button.vue";
-import { useRoute } from "vue-router";
 
-const route = useRoute();
-
-
-const isComeFuzionaView = computed(() => route.path === "/come-funziona");
-
-defineProps({
+const props = defineProps({
   MoreInformationBg: String,
   AnalyzeText: String,
   AnalyzeImage: String,
-  ButtonText: String
+  ButtonText: String,
+  route: String,
 });
 </script>
 

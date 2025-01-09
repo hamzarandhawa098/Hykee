@@ -3,6 +3,7 @@
     :MoreInformationBg="MoreInformationBg"
     :AnalyzeImage="AnalyzeImage"
     :AnalyzeText="AnalyzeText"
+    :route="isComeFuzionaView"
   />
   <MobileSteps
     class="lg:hidden"
@@ -28,7 +29,7 @@
   />
 </template>
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import Analyze from "@/components/ComeFunzionaView/Analyze.vue";
 import MobileStepsComeFunziona from "@/components/ComeFunzionaView/MobileStepsComeFunziona.vue";
 import MoreInformationBg from "@/assets/images/MoreInformationBg.png";
@@ -39,6 +40,13 @@ import StartGrowingFunziona from "@/assets/images/StartGrowingFunziona.png";
 import AnalyzeImage from "@/assets/images/AnalyzeImage.png";
 
 import MobileSteps from "@/components/HomeView/MobileSteps.vue";
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+
+
+const isComeFuzionaView = computed(() => route.path === "/come-funziona");
+
 
 const AnalyzeText = ref(`
   <div>Analizza il tuo business</div>

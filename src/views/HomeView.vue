@@ -20,6 +20,7 @@
     :TechText="'Tecnologia, consulenza, dati <span class=\'text-center\'><br> per  <span class=\'text-primary-color\'>cavalcare i mercati</span></span>'"
     :TechDescription="'La prima piattaforma di Advisory aumentata al mondo. Business, tecnologia, consulenza per imprimere alla tua azienda la crescita che merita'"
     :TitleTextMobile="'Perchè scegliere'"
+    :route="isHomePage"
   />
   <MobileSteps
     class="lg:hidden"
@@ -82,6 +83,11 @@ import IntermediaryBg from "@/assets/images/IntermediaryBg.png";
 import MobileSteps from "@/components/HomeView/MobileSteps.vue";
 import LeftMobile from "@/assets/images/LeftMobile.png";
 import RightMobile from "@/assets/images/RightMobile.png";
+
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+const route = useRoute();
+const isHomePage = computed(() => route.path === "/");
 
 //Analysis
 const mainTitle = ref("Analisi");

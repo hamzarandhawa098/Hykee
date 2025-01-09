@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="flex justify-between items-end lg:items-start mx-[46.5px] text-white lg:pt-[41px]"
+    class="flex bg-background-color justify-between items-end lg:items-start mx-[46.5px] text-white lg:pt-[41px]"
   >
     <div>
       <router-link to="/">
