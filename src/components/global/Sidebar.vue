@@ -10,17 +10,17 @@
         <li
           v-for="(item, index) in navigationItems"
           :key="index"
-          class="px-[28.5px] py-[17px] text-[16px] leading-5 font-poppins font-medium flex items-center border-b border-gray-700"
+          class="px-[28.5px]  py-[17px] text-[16px] leading-5 font-poppins font-medium flex items-center border-b border-gray-700"
           :class="{ 'last:border-none': index === navigationItems.length - 1 }"
           @click="setActive(index)"
         >
           <router-link :to="item.href" class="flex items-center w-full">
-            <div
+            <div 
               :class="{
-                'bg-Sidebar-Active bg-opacity-[20%] svg-active rounded-2xl':
+                'bg-Sidebar-Active active-class  bg-opacity-[20%] svg-active rounded-2xl':
                   index === activeIndex,
               }"
-              class="px-3 py-3"
+              class="px-3 py-3 icon-div"
             >
               <component :is="item.icon" />
             </div>

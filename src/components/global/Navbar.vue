@@ -31,7 +31,7 @@
       </Button>
     </div>
     <div
-      class="lg:hidden mt-4 flex justify-center items-center border rounded-full border-primary-color border-6 p-2"
+      class="lg:hidden hamburger-menu mt-4 flex justify-center items-center border rounded-full border-primary-color border-6 p-2"
     >
       <button @click="toggleMenu" class="text-white">
         <component :is="Hamburger" />
